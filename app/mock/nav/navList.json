@@ -1,0 +1,384 @@
+nav({
+    "data": {
+        "product": [
+            {
+                "id": "pro_01",
+                "title": "泡泡加速器",
+                "info": "网吧版销售平台：http://pop.hintsoft.com.cn/login.jsp",
+                "url": "http://load.shunwang.com//oauth2/authorize.do?client_id=icafe8&redirect_uri=http://bossback.icafe8.com/OAuth2LoginCallback&response_type=code"
+            },
+            {
+                "id": "pro_02",
+                "title": "GameLife-信息流后台",
+                "info": "非最终域名，访问需配置hosts：\n192.168.24.191 rssflow.swjoy.com\n192.168.24.191 rssflowback.swjoy.com\n192.168.24.191 rssflowimg.swjoy.com\nreportgamelife.swjoy.com",
+                "url": "rssflowback.swjoy.com"
+            },
+            {   
+                "id": "pro_03",
+                "title": "GameLife-游戏库后台",
+                "info": "gamelife游戏库配置后台",
+                "url": "http://gamelibback.swjoy.com/index.jsp"
+            },
+            {   
+                "id": "pro_04",
+                "title": "GameLife-商城后台",
+                "info": "gamelife商城运营配置（商品、订单、类别、库存、广告位、活动配置等管理）",
+                "url": "http://mallback.swjoy.com/index.jsp"
+            },
+            {   
+                "id": "pro_05",
+                "title": "计费菜单（万象网管+PubwinOL）",
+                "info": "万象网管及PubwinOL的共同管理后台",
+                "url": "back.bgame.shunwang.com"
+            },
+            {   
+                "id": "pro_06",
+                "title": "火马电竞/娱乐补给站后台",
+				"info": "火马电竞/娱乐补给站后台管理后台",
+                "url": "https://back.huoma.cn "
+            },
+            {   
+                "id": "pro_07",
+                "title": "聚直播",
+                "info": "聚直播运营管理后台",
+                "url": "http://back.jtv123.com"
+            },
+			{   
+                "id": "pro_08",
+                "title": "顺网影视",
+                "info": "顺网影视运营配置后台",
+                "url": "http://mvback.swjoy.com/back/index.jsp"
+            },
+			{   
+                "id": "pro_09",
+                "title": "CJ赛事",
+                "info": "CJ赛事运营管理后台",
+                "url": "http://back.shunwang.com"
+            },
+			{   
+                "id": "pro_10",
+                "title": "新域名官网",
+                "info": "立项阶段",
+                "url": "#"
+            },
+			{   
+                "id": "pro_11",
+                "title": "页游盒子",
+                "info": "产品设计调研阶段，暂未立项",
+                "url": "#"
+            },
+			{   
+                "id": "pro_12",
+                "title": "聚合运营后台",
+                "info": "集成信佑7、迅闪vip、云海后台地址、北极星后台地址的平台",
+                "url": "http://back.login.icafe8.com/index.html"
+            },
+			{   
+                "id": "pro_13",
+                "title": "云海（9050）后台",
+                "info": "9系客户端运营配置（菜单增删改、 菜单区域配置、主题包壁纸更新、默认首页退弹关闭等）",
+                "url": "https://cas.icloud.cn/login"
+            },
+			{   
+                "id": "pro_14",
+                "title": "迅闪vip后台",
+                "info": "迅闪vip客户端运营配置（菜单增删改、 菜单区域配置、主题包壁纸更新等）",
+                "url": "http://appboss.xsvip.hintsoft.com.cn/index.html"
+            },
+			{   
+                "id": "pro_15",
+                "title": "信佑7后台",
+                "info": "信佑7客户端运营配置（菜单增删改、 菜单区域配置、主题包壁纸更新等）",
+                "url": "http://appboss.newxy.hintsoft.com.cn/index.html"
+            },
+            {   
+                "id": "pro_16",
+                "title": "北极星后台",
+                "info": "北极星精准贴片管理后台",
+                "url": "http://polaris.icloud.cn/index.jsp"
+            },
+            {   
+                "id": "pro_17",
+                "title": "SDS顺网数据服务平台",
+                "info": "顺网数据服务平台",
+                "url": "http://sds.shunwang.com/index"
+            },
+			{   
+                "id": "pro_18",
+                "title": "精准排位管理平台",
+                "info": "图标排位、默认首页等精准广告业务管理平台",
+                "url": "http://icon.swjoy.com/dsp/index.htm#/manage/adm/ads"
+            },
+            {   
+                "id": "pro_19",
+                "title": "广告管理平台（28平台）",
+                "info": "游戏推送等管理平台",
+                "url": "http://ad.icafe28.com/index.htm"
+            },
+            {   
+                "id": "pro_20",
+                "title": "补丁升级管理平台",
+                "info": "服务端补丁升级管理（3楼）",
+                "url": "http://www.icafe8.com/diskless/index.jsp"
+            },
+			{   
+                "id": "pro_21",
+                "title": "万象广告管理平台",
+                "info": "万象广告投放、业务关闭后台",
+                "url": "http://122.224.184.82/login/index"
+            },
+            {   
+                "id": "pro_22",
+                "title": "客服工单管理平台",
+                "info": "客服收集反馈问题平台",
+                "url": "http://urtracker.icafe8.com:8400/Accounts/login.aspx?ReturnUrl=%2fpts%2fhome.aspx"
+            }
+        ],
+        "game": [
+            {
+                "id": "game_01",
+                "title": "充值划账后台",
+                "info": "配置游戏充值区服信息",
+                "url": "back.convert.kedou.com"
+            },
+            {
+                "id": "game_02",
+                "title": "详情页后台",
+                "info": "配置官网，发布公告新闻等",
+                "url": "https://scms2.swjoy.com/back/"
+            },
+            {
+                "id": "game_03",
+                "title": "游戏总后台",
+                "info": "详情页地址和微信公众号后台地址的汇总页面",
+                "url": "https://back.ssogame.swjoy.com/main.jsp"
+            },
+            {
+                "id": "game_04",
+                "title": "广告素材投放后台",
+                "info": "上传网页包，生成地址",
+                "url": "http://adsucai.swjoy.com"
+            }, 
+            {
+                "id": "game_05",
+                "title": "活动后台hd2(老）",
+                "info": "配置活动",
+                "url": "http://www.swjoy.com/hd2/back/"
+            }, 
+            {
+                "id": "game_06",
+                "title": "游戏礼包后台",
+                "info": "配置礼包",
+                "url": "https://bag.swjoy.com/back/"
+            }, 	
+            {
+                "id": "game_07",
+                "title": "活动后台hd3(新）",
+                "info": "配置活动",
+                "url": "http://act.swjoy.com/back/index.jsp"
+            },
+            {
+                "id": "game_08",
+                "title": "顺网会员账号查询",
+                "info": "查询用户信息",
+                "url": "http://back.recharge.kedou.com/back/main.jsp"
+            },
+            {
+                "id": "game_09",
+                "title": "独代端游论坛",
+                "info": "配置论坛",
+                "url": "http://192.168.107.228/admin.php"
+            }, 
+            {
+                "id": "game_10",
+                "title": "独代广告后台",
+                "info": "配置广告",
+                "url": "192.168.107.206"
+            }, 
+            {
+                "id": "game_11",
+                "title": "广告发布系统-开放平台",
+                "info": "广告资源投放情况查询",
+                "url": "http://ad.icafe28.com/index.htm"
+            }		
+        ],
+        "ad": [
+            {
+                "id": "ad_01",
+                "title": "广告管理平台",
+                "info": "普投广告位投放，下发，包括网维，信佑7、推送、广告策略设置等相关设置。",
+                "url": "http://ad.icafe28.com/index.htm"
+            },
+            {
+                "id": "ad_02",
+                "title": "推广服务平台",
+                "info": "主要是游戏相关的运营数据，包括终端量、点击量，覆盖信佑7、迅闪vip、网维数据。前期是对外，目前只对内。",
+                "url": "https://puzzle.shunwang.com/sbms/sbms.do?k=79_SMILE"
+            },
+			{
+                "id": "ad_03",
+                "title": "OA一体化平台",
+                "info": "主要实现排期到广告发布一体化的中间平台，包括各种排期的执行进展、对账单报表等。业务运营用得较多。",
+                "url": "http://oa.shunwang.com/adstar/home/index.htm"
+            },
+            {
+                "id": "ad_04",
+                "title": "olol平台",
+                "info": "仅供内容支撑部使用。主要涉及游戏分类、新增、所属菜单变更等。",
+                "url": "http://olol.icafe28.com/olol/admin/index.htm"
+            },
+            {
+                "id": "ad_05",
+                "title": "云海后台-应用宝库后台",
+                "info": "主要有动态皮肤发布、去二级加载页功能、默认首页刷新关联配置等。",
+                "url": "http://appboss.icloud.cn/index.html"
+            },
+			{
+                "id": "ad_06",
+                "title": "万象广告管理系统",
+                "info": "涉及万象广告的策略配置。",
+                "url": "http://122.224.184.82/index/"
+            },
+			{
+                "id": "ad_07",
+                "title": "万象广告管理系统",
+                "info": "涉及pubwin部分广告的策略配置",
+                "url": "http://pubwin.sicenttable.com/login/index"
+            },
+            {
+                "id": "ad_08",
+                "title": "Dsp平台",
+                "info": "硬广类精准广告发布平台",
+                "url": "http://dsp.swjoy.com/index.htm#/manage/index"
+            },
+			{
+                "id": "ad_09",
+                "title": "icon平台",
+                "info": "图标卡牌桌标快启桌面秀O2精准投放管理平台",
+                "url": "http://icon.swjoy.com/index.htm#/manage/shunwang"
+            },
+			{
+                "id": "ad_10",
+                "title": "ssp管理平台",
+                "info": "硬广类广告投放",
+                "url": "http://ssp.swjoy.com/#/manage/resource"
+            },
+            {
+                "id": "ad_11",
+                "title": "精准平台用户权限管理平台",
+                "info": "OA权限平台",
+                "url": "http://power.swjoy.com/permission/index.jsp"
+            },
+			{
+                "id": "ad_12",
+                "title": "IDC监控平台",
+                "info": "广告实时监控异常警报展示处理平台",
+                "url": "http://monitor.swomc.net/index"
+            },
+			{
+                "id": "ad_13",
+                "title": "pubwin桌标快启",
+                "info": "pubwin桌标快启投放、下发",
+                "url": "http://pubwinpzpt.huimai123.com:8118/login.jsp"
+            },
+            {
+                "id": "ad_14",
+                "title": "堡垒机",
+                "info": "pubwin桌标快启图标上传到堡垒机",
+                "url": "https://blj.shunwang.com/"
+            },
+			{
+                "id": "ad_15",
+                "title": "新浩艺业务管理中心平台",
+                "info": "信佑6（图标，卡牌，加载页）的广告位投放、策略配置；",
+                "url": "http://119.97.175.80/ad-center/login"
+            },
+			{
+                "id": "ad_16",
+                "title": "运维中心",
+                "info": "信佑6的游戏推广下发；",
+                "url": "http://183.136.238.40/login/loginPage.do"
+            },
+            {
+                "id": "ad_17",
+                "title": "信佑6默认首页",
+                "info": "信佑6-默认首页，可支持轮播",
+                "url": "http://adm.pubwinmedia.com/index.php?r=site/login"
+            },
+			{
+                "id": "ad_18",
+                "title": "sso平台",
+                "info": "空中网网吧特权维护",
+                "url": "http://sso.icafe28.com/sso/"
+            }
+        ],
+        "increment": [
+            {
+                "id": "inc_01",
+                "title": "流量配置平台（网维万象）",
+                "info": "网维万象环境流量配置修改及发布",
+                "url": "http://swwxpzpt.huimai123.com:9199"
+            },
+            {
+                "id": "inc_02",
+                "title": "流量配置平台（pubwin）",
+                "info": "pubwin环境流量配置修改及发布",
+                "url": "http://pubwinpzpt.huimai123.com:8118"
+            },
+			{
+                "id": "inc_03",
+                "title": "流量数据预警系统",
+                "info": "流量数据查询平台",
+                "url": "http://zzdata.huimai123.com/user/login.html"
+            },
+			{
+                "id": "inc_04",
+                "title": "万象广告管理系统",
+                "info": "万象流量通道及桌标快启开关",
+                "url": "http://122.224.184.82/login/index"
+            },
+            {
+                "id": "inc_05",
+                "title": "综合业务平台",
+                "info": "老流量业务配置及查询（目前只有部分模块有用）",
+                "url": "http://flow.huimai123.com/nbb/backFrame/indexframe.html"
+            },
+			{
+                "id": "inc_06",
+                "title": "联盟分成平台",
+                "info": "网维大联盟业务分成及查询",
+                "url": "http://flow.huimai123.com/allocate/backFrame/indexframe.html"
+            },
+			{
+                "id": "inc_07",
+                "title": "网吧信息查询平台",
+                "info": "网维网吧信息查询",
+                "url": "http://bossback.icafe8.com/index.jsp"
+            },
+            {
+                "id": "inc_08",
+                "title": "流量平台权限管理系统",
+                "info": "管理流量平台权限",
+                "url": "http://flow.huimai123.com/bhoadmin/login.do"
+            },
+			{
+                "id": "inc_09",
+                "title": "f1浏览器bpz平台",
+                "info": "f1浏览器的配置修改和发布",
+                "url": "http://bpz.f1b.cn/backFrame/indexframe.html"
+            },
+			{
+                "id": "inc_10",
+                "title": "f1浏览器bm平台",
+                "info": "f1浏览器的配置修改和发布",
+                "url": "http://bm.f1b.cn/backFrame/indexframe.html"
+            },
+            {
+                "id": "inc_11",
+                "title": "f1浏览器数据监控平台",
+                "info": "f1浏览器各项数据查询",
+                "url": "http://ywdata.f1b.cn/backFrame/indexframe.html"
+            }
+        ]
+    }
+})

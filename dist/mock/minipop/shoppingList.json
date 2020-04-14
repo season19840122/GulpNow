@@ -1,0 +1,60 @@
+shopping({
+    "code": 200,
+    "message": "",
+    "data": [
+        {
+            "title": "爱淘宝：优选好货 爆款热卖",
+            "img": "images/minipop/shopping/293x132.jpg",
+            "url": "https://ai.taobao.com?pid=mm_15485148_43608041_338436682",
+            "info": "",
+        },
+        {
+            "title": "男装",
+            "img": "images/minipop/shopping/109x80_1.jpg",
+            "url": "https://s.click.taobao.com/3bOsoSw",
+            "info": "大牌男装 春夏潮流新品首发",
+        },
+        {
+            "title": "女装",
+            "img": "images/minipop/shopping/109x80_2.jpg",
+            "url": "https://s.click.taobao.com/odCsoSw",
+            "info": "女装主会场 百元大额券限量抢",
+        },
+        {
+            "title": "天猫超市",
+            "img": "images/minipop/shopping/109x80_3.jpg",
+            "url": "https://s.click.taobao.com/65KroSw",
+            "info": "一元抢好货 限时限量 手慢无",
+        },
+        {
+            "title": "唐狮",
+            "img": "images/minipop/shopping/109x80_4.jpg",
+            "url": "https://s.click.taobao.com/MooqoSw",
+            "info": "裤一点，拒绝平凡！",
+        },
+        {
+            "title": "闪电潮牌",
+            "img": "images/minipop/shopping/109x80_5.jpg",
+            "url": "https://s.click.taobao.com/A3NqoSw",
+            "info": "闪电潮牌2018夏季新品",
+        },
+        {
+            "title": "英吉丽",
+            "img": "images/minipop/shopping/109x80_6.jpg",
+            "url": "https://s.click.taobao.com/zICXoSw",
+            "info": "小白鞋 运动休闲鞋",
+        },
+        {
+            "title": "韩都衣舍",
+            "img": "images/minipop/shopping/109x80_7.jpg",
+            "url": "https://s.click.taobao.com/K36XoSw",
+            "info": "韩都衣舍雪纺衫大促",
+        },
+        {
+            "title": "a21",
+            "img": "images/minipop/shopping/109x80_8.jpg",
+            "url": "https://s.click.taobao.com/v6yWoSw",
+            "info": "无“丧”荣光，会心一击",
+        }
+    ]
+})

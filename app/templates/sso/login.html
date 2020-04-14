@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>顺网SSO 登录页</title>
+    <link href="style/public.css" rel="stylesheet" type="text/css">
+    <link href="style/default.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/md5.js"></script>
+    <script type="text/javascript" src="js/jquery-1.4.3.js"></script>
+    <script type="text/javascript" src="js/jquery.slider.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="login/js/login.js"></script>
+    <script type="text/javascript" src="login/js/vc_plug.js"></script>
+    <script type="text/javascript" src="login/js/quick_login_min.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var SSO_SERVER = "https://sso.kedou.com";
+        var interfaceServer = "http://interface.kedou.com";
+    </script>
+    <div class="passport-login" style="display:none;">
+        <form id="login_form_" name="login" onsubmit="return false;" action="/login.do" method="post">
+            <div class="login-box" id="normal_login" style="">
+                <div class="login-msg msg">
+                    <div class="field-tip">
+                        <ul class="error" id="login_">
+                            <li><span id="errorSpan" class="errorSpan">站点ID不能为空！</span></li>
+                        </ul>
+                        <div class="login-type-link"><a class="a035 btn-back-sms" href="#"><span class="icon_type icon_sms"></span>短信快捷登陆</a></div>
+
+                    </div>
+                </div>
+
+                <div class="field placeholder field-username">
+                    <label style="float: left;">用户名：</label>
+                    <input class="login-text text-one" name="userName" type="text" tabindex="1" id="userName" placeholder="用户名/邮箱/手机号" value="xq.yu">
+                    <em></em></div>
+                <div class="field placeholder field-password">
+                    <label style="float: left;">密　码：</label>
+                    <span id="inputEdit">
+					<input tabindex="2" class="login-text text-two" placeholder="请输入密码" id="passwordInp" name="passwordInp" type="password" value="">
+				</span>
+                    <div id="safeEdit" style="display:none; float: left; margin-bottom: 17px;_margin-left:3px;_margin-top:2px"></div>
+                </div>
+
+                <div class="field field-verify">
+                    <label style="float: left;">验证码：</label>
+                    <input tabindex="3" class="login-text checkcode" name="checkCode" type="text" value="">
+                    <img id="checkCode" class="check-code-img" src="" title="换一张" onclick="refreshCheckcode()">
+                    <a class="change-code a035 line-three" href="javascript:refreshCheckcode()">换一张</a>
+                </div>
+
+                <div class="submit">
+                    <input type="hidden" name="callbackUrl" value="" id="login_form__callbackUrl">
+                    <input type="hidden" name="site_id" value="" id="login_form__site_id">
+                    <input type="hidden" name="css" value="" id="login_form__css">
+                    <input type="hidden" name="version" value="" id="login_form__version">
+                    <input type="hidden" name="env" value="" id="login_form__env">
+                    <input type="hidden" name="extData" value="" id="login_form__extData">
+                    <input type="hidden" name="password" value="bcc896c9bc3f07863482d1cc142da57a" id="password">
+                    <input type="hidden" name="md5" value="true" id="md5">
+                    <input type="hidden" name="loginSiteId" value="" id="loginSiteId">
+                    <input type="hidden" name="token_site_id" value="" id="tokenSiteId">
+                    <input type="hidden" name="token" value="" id="token">
+                    <input type="hidden" name="loginType" value="normalLogin" id="loginType">
+                    <input type="hidden" name="loginPage" value="inline" id="login_form__loginPage">
+                    <button id="loginButton_YHJ" type="button" tabindex="5" class="enter" onclick="loginClick()"></button>
+                    <a href="https://sso.kedou.com/login/find-password.jsp?site_id=&amp;version=&amp;env=&amp;extData=" class="a035 line-four" target="_blank">忘记密码？</a>
+                </div>
+                <div class="register_link">
+                    <a href="#" class="a035">立即注册</a>
+                </div>
+            </div>
+        </form>
+        <div class="login-box2" id="quick_login" style="display: none;">
+            <p class="info" id="quick_show_span">检测到顺网通行证，点击头像登录</p>
+            <p class="error" id="quick_login_error">站点ID不能为空！</p>
+            <div class="user-box" data-ui="jquery-slider1">
+                <a href="###" class="prev prev-dis"></a>
+                <a href="###" class="next next-dis"></a>
+                <div class="user-cont" data-ui="jquery-sliderCont">
+                    <ul class="user-list" id="quick_login_box_c">
+                    </ul>
+                </div>
+            </div>
+            <p class="other"><span id="countdown"></span><a href="javascript:showLogin();">使用其他账号</a></p>
+        </div>
+    </div>
+    <div class="sms-login">
+        <form>
+            <div class="login-box">
+
+                <div class="login-msg msg">
+                    <div class="field-tip">
+                        <ul class="error" id="login2">
+                            <li><span id="errorSpan2" class="errorSpan">站点ID不能为空！</span></li>
+                        </ul>
+                        <div class="login-type-link"><a class="a035 btn-back-passport" href="#"><span class="icon_type icon_passport"></span>通行证账号登陆</a></div>
+                    </div>
+                    <div class="field placeholder field-phonenumber">
+                        <label style="float: left;">手机号：</label>
+                        <span>
+					<input class="login-text phonenumber-input" placeholder="请输入手机号"   value="">
+				</span>
+                    </div>
+
+                    <div class="field field-verify">
+                        <label style="float: left;">验证码：</label>
+                        <input tabindex="3" class="login-text checkcode" name="checkCode" type="text" value="">
+                        <img id="checkCode2" class="check-code-img" src="" title="换一张" onclick="refreshCheckcode()">
+                        <a class="change-code a035 line-three" href="javascript:refreshCheckcode()">换一张</a>
+                    </div>
+                    <div class="field field-sms-verify">
+                        <label style="float: left;">短信验证码：</label>
+                        <input tabindex="3" class="login-text sms-checkcode" placeholder="短信验证码" type="text" value="">
+                        <input type="button" id="btnSendSMS" class="phone_sms_resend" tabindex="2" value="发送短信验证码" maxlength="10" onclick="sendAgain();">
+                    </div>
+
+                    <div class="submit">
+                        <button id="" type="button" tabindex="5" class="enter" onclick="loginClick()"></button>
+                    </div>
+                    <div class="protocol-tip">
+                        <p>
+                            验证即登录，未注册将自动创建顺网通行证帐号，且代表您已阅读并接受 <a href="#" target="_blank" class="a035">《顺网通行证用户协议》</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="login-loading" id="loading_login" style="display: none;"></div>
+
+
+    <script type="text/javascript">
+        var initDelAppId;
+        var quickLoginPlugIn;
+        if ("https:" == document.location.protocol) {
+            interfaceServer = interfaceServer.replace("http:", "https:");
+            SSO_SERVER = SSO_SERVER.replace("http:", "https:");
+        }
+
+        var errorMsg = "站点ID不能为空！";
+        var loginType = "normalLogin";
+        document.getElementById("quick_login_error").innerHTML = errorMsg;
+        document.getElementById("errorSpan").innerHTML = errorMsg;
+        if (errorMsg && loginType == "quickLogin" && errorMsg.indexOf("该账号已过期") != -1)
+            initDelAppId = "";
+        $(document).keydown(function(event) {
+            if (event.keyCode == 13) {
+                event.preventDefault();
+                // loginClick();
+            }
+        });
+        $(document).ready(function() {
+            //bodyLoad();
+            quickLoginPlugIn = new QuickLoginPlugIn();
+            quickLoginPlugIn.initQuickLoginPlugIn();
+            if (!quickLoginPlugIn.isIntalled) {
+                showLogin();
+            } else {
+                if (initDelAppId)
+                    quickLoginPlugIn.remove(initDelAppId);
+                var userInfo = quickLoginPlugIn.getAll();
+                if (!userInfo || "[]" == userInfo) {
+                    showLogin(); //组件没数据
+                } else {
+                    if (loginType && loginType == "normalLogin")
+                        showLogin(); //用户已经选择普通登录
+                    else
+                        initQuickLoginBox(userInfo);
+                }
+
+            }
+
+            $(".login-type-link>a").click(function(e) {
+                e.preventDefault();
+
+                //显示通行证登录窗口
+                if ($(this).hasClass("btn-back-passport")) {
+                    $(".sms-login").hide();
+                    $(".passport-login").show();
+                }
+                //显示短信登录窗口
+                else {
+                    $(".passport-login").hide();
+                    $(".sms-login").show();
+                }
+            });
+
+        });
+
+        function showLogin() {
+            if (autoLogin)
+                clearTimeout(autoLogin);
+            $("#quick_login").hide();
+            $("#loading_login").hide();
+            $("#normal_login").show();
+            $("#loginType").val("normalLogin");
+        }
+
+        function showQuickLoginBox() {
+            $("#normal_login").hide();
+            $("#loading_login").hide();
+            $("#quick_login").show();
+            $("#loginType").val("quickLogin");
+        }
+
+        function initQuickLoginBox(userInfo) {
+            userInfo = eval("" + userInfo);
+            var str = "";
+            var len = userInfo.length,
+                u_len = len;
+            var users = {};
+            for (var i = 0; i < len; ++i) {
+                try {
+                    if (users["" + userInfo[i].passportName]) {
+                        u_len--;
+                        continue;
+                    }
+                    users["" + userInfo[i].passportName] = "V-1";
+                    eval("var extData = " + userInfo[i].entendData);
+                    var i_str = "<li><a href='javascript:checkUserToken(\"" + userInfo[i].appid + "\",\"" + userInfo[i].passportName + "\",\"" + userInfo[i].token + "\")' title='" +
+                        userInfo[i].passportName + "'><img src='" + interfaceServer +
+                        "/front/interface/headImageQuery.htm?memberId=" + extData.id + "'/><span>" + userInfo[i].passportName + "</span></a></li>";
+                    str += i_str;
+                } catch (e) {
+                    alert(e);
+                }
+            }
+            if (u_len > 1) {
+                $("#quick_show_span").html("检测到您已登录多个顺网通行证账号");
+            } else {
+                $("#quick_show_span").html("检测到顺网通行证，点击头像登录");
+                //自动登录代码、功能暂不实现
+                //showAutoLoginCountdown(userInfo[0].appid, userInfo[0].passportName, userInfo[0].token);
+            }
+
+            $("#quick_login_box_c").html(str);
+            $('[data-ui="jquery-slider1"]').Slider({
+                "curIndex": 2,
+                "oneWidth": 89
+            });
+            showQuickLoginBox();
+        }
+
+        var sec = 3;
+        var autoLogin;
+
+        function showAutoLoginCountdown(appid, passportName, token) {
+            var countdown = document.getElementById("countdown");
+            if (sec > 0) {
+                countdown.innerHTML = sec.toString() + "秒后自动登录";
+                sec = sec - 1;
+                autoLogin = setTimeout("showAutoLoginCountdown(" + "'" + appid + "','" + passportName + "','" + token + "')", 1000);
+            } else {
+                checkUserToken(appid, passportName, token);
+            }
+        }
+
+        function checkUserToken(tokenSiteId, userName, token) {
+            $("#userName").val(userName);
+            $("#token").val(token);
+            $("#tokenSiteId").val(tokenSiteId);
+            document.getElementById("login_form_").action = SSO_SERVER + "/quickLogin.do";
+            document.getElementById("login_form_").submit();
+        }
+
+        function showChildSite() {
+            if ($(this).attr("id")) {
+                goToOtherSite($(this).attr("id"));
+                return false;
+            }
+            var isActive = $(this).hasClass('on');
+            cleanTip();
+            if (!isActive) {
+                $(this).toggleClass('on');
+            }
+            return false
+        }
+
+        function cleanTip() {
+            $(".drop").each(function() {
+                $(this).removeClass('on');
+            });
+        }
+
+        function goToOtherSite(siteId) {
+            cleanTip();
+            document.getElementById("loginSiteId").value = siteId;
+            document.getElementById("login_form_").action = SSO_SERVER + "/goOutOauth.do";
+            document.getElementById("login_form_").target = "_blank";
+            document.getElementById("login_form_").submit();
+        }
+        $(document).click(cleanTip);
+        $('.drop').click(showChildSite).find('.goto-list').click(function(e) {
+            e.stopPropagation()
+        });
+
+        //短信验证码倒计时
+        var sms_sec = 10;
+
+        function showSendAgain() {
+            var sendAgain = document.getElementById("btnSendSMS");
+            if (null != sendAgain) {
+                if (sms_sec > 0) {
+                    sendAgain.disabled = true;
+                    sendAgain.className = "phone_sms";
+                    sendAgain.value = "重新发送" + sms_sec.toString() + 's';
+                    sms_sec = sms_sec - 1;
+                    $("#second").val(sms_sec);
+                    setTimeout("showSendAgain()", 1000);
+                } else {
+                    sendAgain.className = "phone_sms_resend";
+                    sendAgain.disabled = false;
+                    sendAgain.value = "重新发送";
+                    sms_sec = 60;
+                }
+            }
+        }
+        //发送验证码点击事件
+        function sendAgain() {
+            showSendAgain();
+        }
+    </script>
+
+
+    <div id="plugin" style="width: 0px;height: 0px;text-indent: -2222em;"></div>
+</body>
+
+</html>

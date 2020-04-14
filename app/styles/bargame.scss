@@ -1,0 +1,122 @@
+@import '_base.scss';
+@import '_common.scss';
+
+::placeholder {
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  outline: 0;
+}
+
+*:focus,
+*:active,
+a:active,
+a:focus,
+input:focus,
+input:active {
+  -moz-outline-style: none;
+  outline: none;
+  outline: 0;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* 背景 */
+.browser {
+  height:28px;
+  font-size:14px;
+  line-height:28px;
+  color:#C7A17B;
+  background:#FFFFE1;
+  position:absolute;
+  width:100%;
+  min-width:1200px;
+  text-align:center;
+  z-index:1000;
+  left:0;
+  top:0;
+  a {
+    color:#06c;
+    text-decoration:underline;
+  }
+}
+
+body {
+  background-color:#13151d;
+  font: 14px/1.5 'Microsoft YaHei';
+}
+.bg-box{
+  min-width:1200px;
+  div {
+    width:100%;
+  }
+}
+.bg1{
+  background:url(../images/faq/bg01.jpg) no-repeat center 0;
+  height:398px;
+}
+.bg2{
+  background:url(../images/faq/bg02.jpg) no-repeat center 0;
+  height:492px;
+}
+.bg3{
+  background-color: #21232b;
+  height:557px;
+}
+/* 背景 end */
+
+/* 主体内容 */
+.wrap-box {
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  min-width:1200px;
+  overflow:hidden;
+  .wrap{
+    width:1200px;
+    height:1447px;
+    margin:0 auto;
+    position:relative;
+    .gd-wrap {
+      margin-top: 55px;
+      text-align: center;
+      .gd {
+        width: 300px;
+        height: 50px;
+        display: inline-block;
+        background: url(../images/faq/btn-gd.png) no-repeat;
+        &:hover {
+          background-position: 0 -50px;
+        }
+      }
+    }
+  }
+}
+/* 主体内容 end */

@@ -1,0 +1,158 @@
+@import '_base.scss';
+@import '_common.scss';
+
+[v-cloak] {
+  display: none;
+}
+
+@mixin tablinks($top: -136px) {
+  background: url(../images/chiji/sprite.png) no-repeat -10px $top;
+
+  &:hover,
+  &.active:hover {
+    background-position: -86px $top;
+  }
+
+  &.active {
+    background-position: -162px $top;
+  }
+}
+
+@mixin chijiScroll() {
+  @extend .mainScroll;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #b68443;
+
+    &:hover,
+    &:active {
+      background: #b68443;
+    }
+  }
+}
+
+::placeholder {
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  outline: 0;
+}
+
+*:focus,
+*:active,
+a:active,
+a:focus,
+input:focus,
+input:active {
+  -moz-outline-style: none;
+  outline: none;
+  outline: 0;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* 头 */
+body {
+  font: 26px/1.5 'SimHei';
+}
+
+.size {
+  width: 1300px; 
+  margin: 0 auto;
+  position: relative;
+}
+/* 头 end */
+
+.box {
+  .bg01 {
+    background: url(../images/rent/bg01.jpg) no-repeat center top;
+    height: 164px;
+  }
+  .bg02 {
+    background: url(../images/rent/bg02.jpg) no-repeat center top;
+    height: 776px;
+    position: relative;
+    .link-wrap {
+      a {
+        text-indent: -9999px;
+        position: absolute;
+        &.zjqh {
+          left: 493px;
+          top: 38px;
+          width: 253px;
+          height: 334px;
+        }
+        &.dzyk {
+          left: 773px;
+          top: 158px;
+          width: 248px;
+          height: 174px;
+        }
+        &.qpf {
+          left: 133px;
+          top: 198px;
+          width: 248px;
+          height: 174px;
+        }
+        &.mnpw {
+          left: 34px;
+          top: 386px;
+          width: 265px;
+          height: 199px;
+        }
+        &.kpdl {
+          left: 1024px;
+          top: 198px;
+          width: 265px;
+          height: 174px;
+        }
+        &.txgz {
+          left: 899px;
+          top: 372px;
+          width: 182px;
+          height: 246px;
+        }
+        &.dwhj {
+          left: 299px;
+          top: 372px;
+          width: 581px;
+          height: 296px;
+        }
+      }
+    }
+  }
+}

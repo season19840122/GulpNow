@@ -1,0 +1,238 @@
+@import '_base.scss';
+@import '_common.scss';
+
+[v-cloak] {
+  display: none;
+}
+
+@mixin tablinks($top: -136px) {
+  background: url(../images/chiji/sprite.png) no-repeat -10px $top;
+
+  &:hover,
+  &.active:hover {
+    background-position: -86px $top;
+  }
+
+  &.active {
+    background-position: -162px $top;
+  }
+}
+
+@mixin chijiScroll() {
+  @extend .mainScroll;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #b68443;
+
+    &:hover,
+    &:active {
+      background: #b68443;
+    }
+  }
+}
+
+::placeholder {
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  outline: 0;
+}
+
+*:focus,
+*:active,
+a:active,
+a:focus,
+input:focus,
+input:active {
+  -moz-outline-style: none;
+  outline: none;
+  outline: 0;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* 头 */
+body {
+  font: 26px/1.5 'SimHei';
+  background: url(../images/cure/bg.jpg) no-repeat center top;
+}
+
+.size {
+  width: 1200px; 
+  margin: 0 auto;
+  position: relative;
+}
+/* 头 end */
+
+.box {
+  .content-wrap {
+    background: url(../images/cure/nihong.png) no-repeat center top;
+    height: 1080px;
+    padding: 200px 35px;
+    position: relative;
+    ul {
+      li {
+        cursor: pointer;
+        float: left;
+        width: 150px;
+        height: 230px;
+        background: url(../images/cure/dark.png) no-repeat center top;
+        margin-right: 46px;
+        margin-bottom: 52px;
+        &.on {
+          background: url(../images/cure/light.png) no-repeat center -12px;
+        }
+        .item {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          .name {
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            bottom: 0;
+            text-align: center;
+            height: 46px;
+            line-height: 46px;
+            color: #00ff24;
+            @extend .eps;
+          }
+        }
+      }
+    }
+    .gift {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      width: 305px;
+      height: 305px;
+    }
+  }
+
+  // 弹窗 & 遮罩
+  .masklayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 998;
+    background: #000;
+    opacity: .8;
+    display: none;
+  }
+
+  $w: 556px; $h: 807px;
+  .dialog-wrap {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: (-556px/2);
+    margin-top: (-807px/2);
+    z-index: 999;
+    width: $w;
+    height: $h;
+    background: url(../images/cure/dialog-bg.png) no-repeat;
+    display: none;
+    .i-close {
+      background: url(../images/cure/btn-close.png) no-repeat;
+      position: absolute;
+      right: -25px;
+      top: 30px;
+      width: 82px;
+      height: 82px;
+      cursor: pointer;
+      &:hover {
+        background: url(../images/cure/btn-close-hover.png) no-repeat;
+      }
+    }
+    .contents {
+      color: #fff;
+      margin: 250px 86px 0 70px;
+      text-align: center;
+      .caption {
+        text-align: center;
+        margin-bottom: 33px;
+        width: 180px;
+        line-height: 50px;
+        background: none;
+        border-style: none;
+        @extend .eps;
+      }
+      .txt {
+        font-size: 22px;
+        line-height: 50px;
+        background: none;
+        border-style: none;
+        width: 100%;
+        height: 245px;
+        overflow: hidden;
+      }
+      .p1 {
+        float: right;
+        width: 122px;
+        font-size: 22px;
+        line-height: 36px;
+        text-align: center;
+        background: none;
+        border-style: none;
+        @extend .eps;
+      }
+      .error {
+        position: absolute;
+        left: 70px;
+        bottom: 184px;
+        font-size: 16px;
+        color: #f00;
+        display: none;
+      }
+    }
+    .btn-wrap {
+      position: absolute;
+      left: 50%;
+      margin-left: (-118px/2);
+      bottom: 79px;
+      z-index: 10;
+      .btn-sure {
+        display: inline-block;
+        width: 118px;
+        height: 50px;
+        background: url(../images/cure/btn-sure.png) no-repeat;
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+"use strict";var _json=require("../axios/json"),_json2=_interopRequireDefault(_json);function _interopRequireDefault(o){return o&&o.__esModule?o:{default:o}}window.$=$,window.axios=_json2.default,window.common=common;

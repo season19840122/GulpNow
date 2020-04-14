@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <title>VIP 特权返利活动</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+        <meta name="renderer" content="webkit">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="styles/vipfl.css">
+  </head>
+<body>
+    <!--[if lt IE 8]>
+        <div id="browser"  class="browser">
+          <p>顺网提醒您：为了更好的浏览本页面，快跟您过时的浏览器说声后会无期，强烈建议升级至<a href="http://windows.microsoft.com/zh-cn/windows/upgrade-your-browser">最新版IE</a>或顺网<a href="http://www.f1browser.com" target="_blank">[f1浏览器]</a></p>
+        </div>
+    <![endif]-->
+
+    
+    <div class="headbar">
+      <div class="headbar-box">
+        <div class="nav">
+          <a href="https://www.swjoy.com/" target="_blank">游戏官网</a>|
+          <a href="https://www.swjoy.com/act/" target="_blank">活动中心</a>|
+          <a href="###" class="wx">官方微信
+            <div class="wx-bd">
+              <div class="arrow"></div>
+              <img class="qrcode" src="images/vipfl/code.jpg" alt="微信二维码">
+            </div>
+          </a>
+        </div>
+        <div class="login">
+            <span class="a">
+              <a href="#" id="btn_login_sw">登录</a>|<a href="#" id="btn_reg">注册</a>
+            </span>
+          <span class="b">
+              <a href="#" id="btn-login_qq">使用QQ号直接登录，无需注册</a>
+            </span>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    <div class="bg-box">
+      <div class="bg1"></div>
+      <div class="bg2"></div>
+      <div class="bg3"></div>
+    </div>
+
+    <div class="wrap-box">
+        <div class="wrap">
+          <div class="top-wrap">
+            <p class="date">活动时间：8月15日起</p>
+            
+            
+            
+            <button class="btn-exit">
+              <span>欢迎您，zhou1***</span>
+            </button>
+          </div>
+          <div class="fl-wrap">
+            <p class="tips">注：专属返利仅在此页面充值有效</p>
+            <form action="">
+              <div class="pay-box">
+                <div class="row">
+                  <label class="fl">充值账号：</label>
+                  <div class="ipt-wrap fl">
+                    <input class="ipt-txt" type="text">
+                    
+                    <a href="###" class="warn"></a>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="fl">选择游戏：</label>
+                  <div class="txt-wrap fl">
+                    <div class="select-wrap sel-game fl" id="selGame">
+                      <input class="sel fl clearfix" type="text" readonly placeholder="请选择游戏"><a class="sel-dropdown fl" href="###"></a>
+                      <div class="games-fake hide" id="serverLoading">
+                        <div class="loading">游戏查询中</div>
+                      </div>
+                      <div class="select-dropMenu select-game hide" id="game-dropMenu">
+                        <div class="heads-wrap">
+                          <ul class="heads">
+                            <li class="curr">玩过的</li>
+                            <li>ABC</li>
+                            <li>DEFG</li>
+                            <li>HIJK</li>
+                            <li>LMNO</li>
+                            <li>PQRS</li>
+                            <li>TUVM</li>
+                            <li>XYZ</li>
+                            <li>0-9</li>
+                          </ul>
+                        </div>
+                        <div class="bodys-wrap">
+                          <ul class="bodys">
+                            <li><span class="name b">1</span><span class="info">VIP特权返利150%</span><span class="select"></span></li>
+                            <li><span class="name">NBA征程</span><span class="select"></span></li>
+                          </ul>
+                          <ul class="bodys hide">
+                            <li><span class="name">2</span><span class="select"></span></li>
+                          </ul>
+                          <ul class="bodys hide">
+                            <li><span class="name">3</span><span class="select"></span></li>
+                          </ul>
+                          <ul class="bodys hide">
+                            <li><span class="name">4</span><span class="select"></span></li>
+                          </ul>
+                          <ul class="bodys hide">
+                            <li><span class="name">5</span><span class="select"></span></li>
+                          </ul>
+                          <ul class="bodys hide">
+                            <li><span class="name">6</span><span class="select"></span></li>
+                          </ul>
+                          <ul class="bodys hide">
+                            <li><span class="name">7</span><span class="select"></span></li>
+                          </ul>
+                          <ul class="bodys hide">
+                            <li><span class="name">8</span><span class="select"></span></li>
+                          </ul>
+                          <ul class="bodys hide">
+                            <li><span class="name">9</span><span class="select"></span></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="select-wrap sel-serve fl hide" id="selServe">
+                      <input class="sel fl clearfix" type="text" readonly placeholder="请选择区服"><a class="sel-dropdown fl" href="###"></a>
+                      <div class="games-fake hide" id="gameLoading">
+                        <div class="loading">区服查询中</div>
+                      </div>
+                      <div class="select-dropMenu select-serve hide" id="serve-dropMenu">
+                        <div class="heads-wrap">
+                          <ul class="heads">
+                            <li class="curr">最近玩过的区服</li>
+                          </ul>
+                        </div>
+                        <div class="bodys-wrap">
+                          <ul class="bodys">
+                            <li><span class="name">七魄</span><span class="select"></span></li>
+                            <li><span class="name">NBA征程</span><span class="select"></span></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div><span class="fl roleName hide" id="roleName">角色名：魏若菡</span>
+                    <div class="select-wrap input-filter sel-roleName fl hide">
+                      <input class="sel fl clearfix" type="text" readonly placeholder="全部"><a class="sel-dropdown fl" href="###"></a>
+                      <div class="filter-wrap hide">
+                        <ul class="filter-list">
+                          <li>全部</li>
+                          <li>角色1</li>
+                          <li>角色2</li>
+                          <li>角色3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="fl">充值金额：</label>
+                  <div class="txt-wrap fl">
+                    <ul class="money-wrap clearfix">
+                      <li><span class="unit">10元</span><span class="select"></span><span class="select-flag"></span></li>
+                      <li><span class="unit">20元</span><span class="select"></span><span class="select-flag"></span></li>
+                      <li><span class="unit">30元</span><span class="select"></span><span class="select-flag"></span></li>
+                      <li><span class="unit">50元</span><span class="select"></span><span class="select-flag"></span></li>
+                      <li class="on"><span class="unit">100元</span><span class="select"></span><span class="select-flag"></span></li>
+                      <li><span class="unit">200元</span><span class="select"></span><span class="select-flag"></span></li>
+                      <li><span class="unit">300元</span><span class="select"></span><span class="select-flag"></span></li>
+                      <li><span class="unit">500元</span><span class="select"></span><span class="select-flag"></span></li>
+                      <li><span class="unit">1000元</span><span class="select"></span><span class="select-flag"></span></li>
+                      <li id="othermoney">
+                        <div class="default"><span class="unit">其他金额</span><span class="select"></span></div>
+                        <div class="click">
+                          <div class="txt-wrap2">
+                            <input class="txt-ssm fl" type="text" maxlength="10">
+                          </div><span class="unit">元</span><span class="select" style="display:block"></span><span class="select-flag" style="display:block"></span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="info-wrap">
+                  <p class="info">充值成功即可获得<span>999999</span>元宝</p>
+                  <p class="info">VIP特权活动额外返<span>999999</span>元宝</p>
+                </div>
+                <div class="row">
+                  <label class="fl">实付金额：</label>
+                  <span class="money">99999元</span>
+                </div>
+                <div class="btn-wrap">
+                  <button class="btn" id="ljcz">立即充值</button>
+                  <button class="btn" id="record">充值记录</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="rule-wrap">
+            <ul>
+              <li>专属返利仅在此页面充值有效，游戏内充值不享有返利</li>
+              <li>特权返利活动不参与平台日常返利</li>
+              <li>优惠券充值金额不累计</li>
+              <li>特权活动参与游戏将逐步增加，敬请期待</li>
+              <li>本活动最终解释权归顺网游戏所有</li>
+            </ul>
+          </div>
+        </div>
+    </div>
+    
+    
+    <div class="footer_group">
+        <div class="footer">
+            <p class="link">
+                <a href="https://www.swjoy.com/intro.html" target="_blank">公司简介</a><span>|</span>
+                <a href="https://www.swjoy.com/cooperation.html" target="_blank">联系我们</a><span>|</span>
+                <a href="https://www.swjoy.com/copyright.html" target="_blank">著作权保护声明</a><span>|</span>
+                <a href="https://www.swjoy.com/policy.html" target="_blank">隐私策略</a><span>|</span>
+                <a href="https://www.swjoy.com/licence.html" target="_blank">网络文化经营许可证 浙网文[2019]1212-118</a>
+            </p>
+            <p>版权所有 2005-2019 杭州顺网科技股份有限公司 保留所有权利 浙B2-20090265</p>
+            <p>抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活</p>
+            <p class="an">
+                <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602005074" target="_blank"><img src="images/vipfl/ghs.png">浙公网安备 33010602005074号</a>
+                <a href="/www/jump.do?to=http%3A%2F%2Fupload.shunwang.com%2Fresponsibility.pdf" target="_blank">互联网文化经营单位安全生产和规范经营-责任书</a>
+            </p>
+            <div class="pic">
+                <a target="_blank" href="http://idinfo.zjaic.gov.cn/bscx.do?method=hddoc&amp;id=33000000008182"><img src="images/vipfl/i_lo2.gif" border="0"></a>
+                <a href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/8A82C51D57654B639A8861237157F60B" target="_blank"><img src="images/vipfl/wen.png" alt="互联网文化经营单位"></a>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <div class="mask"></div>
+    <div class="masklayer"></div>
+
+    
+    <div id="loginDialog" tabindex="-1" role="dialog" class="modal" data-backdrop="static">
+        <div class="modal-dialog sso-login-box">
+            <div class="swGame-modal-content">
+                <div class="swGame-modal-header">
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="swGame-close"><span aria-hidden="true"></span></button>
+                    <div class="swGame-modal-hd">
+                        <div class="swGame-modal-title swGame-curr">账号登录</div>
+                        <div class="swGame-modal-title">注册</div>
+                    </div>
+                </div>
+                <div class="swGame-modal-body">
+                    <div class="swGame-modal-bd">
+                        <iframe scrolling="no" frameborder="0" id="ssoLoginfrm" class="swGame-form" allowtransparency="true" src="https://sso.kedou.com/login.do?callbackUrl=https%3a%2f%2fact.swjoy.com%2fhd%2findex%2f2016%2f24&amp;site_id=game_grow&amp;loginType=quickLogin"></iframe>
+                    
+                        <div class="other-login-wrapper">
+                            <p class="text">使用以下账号登录：</p>
+                            <div class="other-img-box">
+                                <a href="#" class="qq" id="showQqModalBtn"><img src="images/vipfl/qq.png" alt="qq"></a>
+                                <a href="#" class="weixin" id="showWxModalBtn"><img src="images/vipfl/wechat.png" alt="微信"></a>
+                                <a href="#" class="weibo" id="showWbModalBtn"><img src="images/vipfl/wb.png" alt="微博"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swGame-modal-bd none">
+                        <form id="regForm" class="swGame-regForm">
+                            <div class="swGame-form-item">
+                                <label for="regUsername" class="swGame-label">通行证：</label>
+                                <input type="text" id="regUsername" class="swGame-txt" name="userName">
+                                
+                                <span id="err1" class="swGame-tip swGame-error">4-16个字符，可用数字、中文、字母、下划线</span>
+                            </div>
+                            <div class="swGame-form-item">
+                                <label for="regPassword" class="swGame-label">密码：</label>
+                                <input type="password" id="regPassword" class="swGame-txt" name="password">
+                                <span id="err2" class="swGame-tip">6-16个字符，可用数字、字母、下划线</span>
+                            </div>
+                            <div class="swGame-form-item">
+                                <label for="regRepassword" class="swGame-label">确认密码：</label>
+                                <input type="password" id="regRepassword" class="swGame-txt" name="cormPassword">
+                                <span id="err3" class="swGame-tip">再输入一遍上面的密码</span>
+                            </div>
+                            <div class="swGame-form-item">
+                                <label for="regIdcard" class="swGame-label">身份证：</label>
+                                <input type="text" id="regIdcard" class="swGame-txt" name="idCard">
+                                <span id="err4" class="swGame-tip">输入15或18位身份证号码</span>
+                            </div>
+                            <div class="swGame-form-item">
+                                <label for="regRealname" class="swGame-label">真实姓名：</label>
+                                <input type="text" id="regRealname" class="swGame-txt" name="realName">
+                                <span id="err5" class="swGame-tip">真实姓名请使用中文，2-10个汉字</span>
+                            </div>
+                            <div class="swGame-form-item">
+                                <label for="captchRefreshBtn" class="swGame-label">验证码：</label>
+                                <input type="text" id="captchRefreshBtn" class="swGame-txt swGame-captcha" name="code"><a href="javascript:;" onclick="refreshCode('https://act.swjoy.com');"><img id="captch-refreshbtn" src="https://act.swjoy.com/img/code/a"></a>
+                                <span id="err6" class="swGame-tip">请输入验证码</span>
+                            </div>
+                            <div class="swGame-agree">
+                                <label for="agreement">
+                                    <input type="checkbox" checked class="modal-checkbox" id="agreement"><span>我已阅读并接受
+                                    <a href="http://passport.kedou.com/front/noLogin/agreeMent.jsp" target="_blank">《顺网用户协议》</a></span>
+                                </label>
+                            </div>
+                            <input type="button" value="马上注册" class="swGame-btn-red" id="regBtn" onclick="doRegister('https://act.swjoy.com');">
+                            <input type="hidden" name="hdId" value="24">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="sp-modal other-modal modal" id="loginQqModal" tabindex="-1" role="dialog" data-backdrop="static">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a class="modal-close" data-dismiss="modal" aria-hidden="true">×</a>
+          <div class="modal-body">
+            <iframe class="qq-iframe" allowtransparency="true" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="sp-modal other-modal modal" id="loginWxModal" tabindex="-1" role="dialog" data-backdrop="static">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a class="modal-close" data-dismiss="modal" aria-hidden="true">×</a>
+          <div class="modal-body">
+            <iframe class="wx-iframe" allowtransparency="true" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="sp-modal other-modal modal" id="loginWbModal" tabindex="-1" role="dialog" data-backdrop="static">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a class="modal-close" data-dismiss="modal" aria-hidden="true">×</a>
+          <div class="modal-body">
+            <iframe class="wb-iframe" allowtransparency="true" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="modal my-modal my-modal-s" tabindex="-1" role="dialog" id="noticeDialog" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="title">通知</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="info-box">
+                        <div class="info">
+                            
+                            <p class="text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-wrapper">
+                        <a class="btn" href="javascript:void(0)"> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="close icon-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></div>
+        </div>
+    </div>
+    
+    
+    
+    <div class="button-wrap">
+      <button>充值记录</button>
+      <button>充值信息确认</button>
+      <button>扫码充值</button>
+    </div>
+    
+
+    
+    <div class="dialog-wrap dialog1">
+      <button class="btn-close ti">关闭</button>
+      <div class="content-wrap">
+        <div class="content">
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th>时间</th>
+                <th>消费金额</th>
+                <th>游戏信息</th>
+                <th>订单号</th>
+                <th>状态</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2019.08.13 23:59:59</td>
+                <td>30元</td>
+                <td>少年封神H5（顺网9999服）</td>
+                <td>LSJ_6313_20190813182440_607599</td>
+                <td>未支付</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="paging-wrap">
+            <ul class="paging">
+              <li class="prev"><a href="#">上一页</a></li>
+              <li class="on"><a href="">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">6</a></li>
+              <li><a href="#">7</a></li>
+              <li><a href="#">8</a></li>
+              <li><a href="#">9</a></li>
+              <li class="next"><a href="">下一页</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="dialog-wrap dialog2">
+      <button class="btn-close ti">关闭</button>
+      <div class="content-wrap">
+        <div class="content">
+          <div class="row">
+            <label class="lbl">充值方式：</label>
+            <span class="s1">扫码充值</span>
+          </div>
+          <div class="row">
+            <label class="lbl">充值游戏：</label>
+            <span class="s1">唐门六道3D 顺网9999服 </span>
+          </div>
+          <div class="row">
+            <label class="lbl">充值账号：</label>
+            <span class="s2">qq_12345678901234567890</span>
+          </div>
+          <div class="row">
+            <label class="lbl">实付金额：</label>
+            <span class="s1">9999.00元</span>
+          </div>
+          <div class="row">
+            <label class="lbl">充值所得：</label>
+            <span class="s1">999999元宝</span>
+          </div>
+        </div>
+        <div class="btn-wrap">
+          <button class="btn-sure" id="confirm">确认提交</button>
+          <button class="btn-back">返回修改</button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="dialog-wrap dialog3">
+      <button class="btn-close ti">关闭</button>
+      <div class="content-wrap">
+        <div class="content">
+          <p class="txt">1.打开<i class="ico-ali"></i>支付宝/<i class="ico-wx"></i>微信手机客户端</p>
+          <p class="txt">2.使用“<span class="s3">扫一扫</span>”扫描下方二维码</p>
+          <div class="qrcode-wrap">
+            <h3>支付金额：9999.00元</h3>
+            <div class="qrcode"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="scripts/common-vipfl.js"></script>
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/jquery.qrcode.min.js"></script>
+    <script src="scripts/vipfl.js"></script>
+</body>
+</html>

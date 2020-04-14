@@ -1,0 +1,910 @@
+@import '_base.scss';
+@import '_common.scss';
+
+[v-cloak] {
+  display: none;
+}
+
+@mixin tablinks($top: -136px) {
+  background: url(../images/chiji/sprite.png) no-repeat -10px $top;
+  &:hover, &.active:hover {
+    background-position: -86px $top;
+  }
+  &.active {
+    background-position: -162px $top;
+  }
+}
+
+@mixin chijiScroll() {
+  @extend .mainScroll;
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #b68443;
+    &:hover, &:active {
+      background: #b68443;
+    }
+  }
+}
+
+::placeholder {
+  color: #8d7652;
+}
+
+.box {
+    font: 12px/1.5 'SimSun';
+    // position: absolute;
+    // top: 0px;
+    // left: 0px;
+    width: 748px;
+    height: 509px;
+    margin: 0 auto;
+    overflow: hidden;
+    .title-wrap {
+        height: 39px;
+        background: #ccebff;
+        width: 100%;
+        position: relative;
+        .logo {
+            position: absolute;
+            left: 42px;
+            top: 10px;
+            width: 133px;
+            height: 20px;
+            background: url('../images/minipop/sprite-minipop.png') no-repeat;
+        }
+        .baidu-search-wrap {
+            position: absolute;
+            left: 225px;
+            top: 6px;
+            width: 350px;
+            height: 28px;
+            line-height: 28px;
+            padding: 5px;
+            border-radius: 14px;
+            background: url('../images/minipop/searchbox.png') no-repeat;
+            .txt-search {
+                width: 75%;
+                height: 25px;
+                line-height: 25px;
+                position: absolute;
+                left: 12px;
+                top: 1px;
+                border: 0;
+                outline: 0;
+                // background: #f00;
+            }
+            .btn-search {
+                width: 70px;
+                height: 26px;
+                background: url('../images/minipop/btn-search.png') no-repeat;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            .hotword {
+                position: absolute;
+                right: -70px;
+                top: 0;
+                color: #118eea;
+                font-size: 13px;
+            }
+        }
+        .btn-close {
+            position: absolute;
+            right: 13px;
+            top: 13px;
+            width: 15px;
+            height: 15px;
+            background: url('../images/minipop/btn-close.png') no-repeat;
+        }
+    }
+    .nav-wrap {
+        background: #f8f8f8;
+        width: 100%;
+        height: 35px;
+        border-bottom: 1px solid #e3e3e3;
+        padding-left: 18px;
+        a {
+            float: left;
+            width: 48px;
+            height: 100%;
+            line-height: 34px;
+            color: #a09fa7;
+            font-size: 13px;
+            font-family: 'Microsoft YaHei';
+            text-align: center;
+            position: relative;
+            &.active {
+                color: #118eea;
+                i {
+                    content: '';
+                    position: absolute;
+                    left: 5px;
+                    bottom: -1px;
+                    width: 40px;
+                    height: 2px;
+                    background:#118eea;
+                }
+            }
+        }
+    }
+    .content-wrap {
+        width: 100%;
+        padding: 15px 12px;
+        height: 435px;
+        position: relative;
+        .ad-wrap {
+            position: absolute;
+            right: 12px;
+            width: 150px;
+            .ad1, .ad2 {
+                width: 100%;
+                height: 274px;
+                // background: #ff0000;
+                margin-bottom: 9px;
+                overflow: hidden;
+            }
+            .ad2 {
+                margin-bottom: 0;
+                height: 120px;
+            }
+            .sw-ifm {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .headline-left-wrap {
+            float: left;
+            width: 194px;
+            .headline-a-wrap {
+                position: relative;
+                width: 194px;
+                height: 125px;
+                ul {
+                    li {
+                        position: relative;
+                        width: 194px;
+                        height: 128px;
+                        margin-bottom: 11px;
+                        .pic {
+                            display: inline-block;
+                            img {
+                                width: 194px;
+                                height: 125px;
+                                display: block;
+                            }
+                        }
+                        .bg {
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            width: 100%;
+                            height: 23px;
+                            background: #000000;
+                            opacity: .7;
+                            .txt {
+                                display: block;
+                                width: 100%;
+                                line-height: 23px;
+                                color: #ffffff;
+                                text-align: center;
+                                padding: 0 3px;
+                                @extend .eps;
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .headline-center-wrap {
+            float: left;
+            width: 344px;
+            margin-left: 17px;
+            .headline-b-wrap {
+                ul {
+                    li {
+                        width: 344px;
+                        margin-bottom: 3px;
+                        .item-wrap {
+                            font-size: 13px;
+                            .item-a, .item-b {
+                                width: 100%;
+                                font-weight: bold;
+                                line-height: 20px;
+                                display: block;
+                                color: #2798da;
+                                @extend .eps;
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                            .item-b {
+                                font-weight: normal;
+                                line-height: 23px;
+                                color: #000000;
+                                span {
+                                    display: inline-block;
+                                    width: 12px;
+                                    height: 15px;
+                                    margin-right: 5px;
+                                    text-align: center;
+                                    i {
+                                        width: 5px;
+                                        height: 5px;
+                                        display: inline-block;
+                                        background: #de2600;
+                                        margin-top: -5px;
+                                        vertical-align: middle;
+                                    }
+                                    &.hot {
+                                        margin-left: 0;
+                                        background: url(../images/minipop/sprite-minipop.png) no-repeat 0 -153px;
+                                        width: 12px;
+                                        height: 15px;
+                                        i {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .game-wrap {
+            .game-left-wrap {
+                float: left;
+                width: 358px;
+                .game-a-wrap {
+                    position: relative;
+                    width: 358px;
+                    height: 128px;
+                    .pic {
+                        display: inline-block;
+                        img {
+                            width: 358px;
+                            height: 128px;
+                            display: block;
+                        }
+                    }
+                    .bg {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 23px;
+                        background: #000000;
+                        opacity: .7;
+                        .txt {
+                            display: block;
+                            width: 100%;
+                            line-height: 23px;
+                            color: #ffffff;
+                            text-align: center;
+                            padding: 0 3px;
+                            @extend .eps;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                .game-c-wrap {
+                    width: 100%;
+                    margin-top: 9px;
+                    ul {
+                        li {
+                            width: 100%;
+                            height: 85px;
+                            margin-bottom: 6px;
+                            .pic {
+                                display: inline-block;
+                                img {
+                                    width: 160px;
+                                    height: 85px;
+                                    display: inline-block;
+                                }
+                            }
+                            .txt {
+                                margin-left: 10px;
+                                width: 182px;
+                                display: inline-block;
+                                font-size: 14px;
+                                color: #118eea;
+                                vertical-align: middle;
+                                // @include hmeps;
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .game-center-wrap {
+                .game-b-wrap {
+                    float: left;
+                    width: 194px;
+                    margin-left: 12px;
+                    ul {
+                        li {
+                            position: relative;
+                            width: 194px;
+                            height: 128px;
+                            margin-bottom: 10px;
+                            .pic {
+                                display: inline-block;
+                                img {
+                                    width: 100%;
+                                    height: 128px;
+                                    display: block;
+                                }
+                            }
+                            .bg {
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                width: 100%;
+                                height: 23px;
+                                background: #000000;
+                                opacity: .7;
+                                .txt {
+                                    display: block;
+                                    width: 100%;
+                                    line-height: 23px;
+                                    color: #ffffff;
+                                    text-align: center;
+                                    padding: 0 3px;
+                                    @extend .eps;
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .film-wrap {
+            .film-left-wrap {
+                float: left;
+                width: 287px;
+                .film-a-wrap {
+                    position: relative;
+                    width: 287px;
+                    height: 206px;
+                    .pic {
+                        display: inline-block;
+                        img {
+                            width: 100%;
+                            height: 206px;
+                            display: block;
+                        }
+                    }
+                    .bg {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 27px;
+                        background: #000000;
+                        opacity: .7;
+                        .txt {
+                            display: block;
+                            width: 100%;
+                            line-height: 27px;
+                            color: #ffffff;
+                            text-align: center;
+                            padding: 0 3px;
+                            @extend .eps;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .film-b-wrap {
+                width: 270px;
+                margin-top: 9px;
+                ul {
+                    li {
+                        width: 100%;
+                        height: 90px;
+                        margin-bottom: 10px;
+                        .pic-wrap {
+                            width: 160px;
+                            height: 90px;
+                            float: left;
+                            position: relative;
+                            .pic {
+                                img {
+                                    width: 160px;
+                                    height: 90px;
+                                    display: inline-block;
+                                }
+                            }
+                            .mode, .modeplus {
+                                position: absolute;
+                                right: 5px;
+                                top: 5px;
+                                width: 15px;
+                                height: 13px;
+                                background: url(../images/minipop/sprite-minipop.png) no-repeat 0 -44px;
+                            }
+                            .modeplus {
+                                width: 19px;
+                                height: 13px;
+                                background: url(../images/minipop/sprite-minipop.png) no-repeat 0 -80px;
+                            }
+                            .tips {
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                width: 100%;
+                                color: #ffffff;
+                                font-size: 12px;
+                                .watch {
+                                    i {
+                                        margin: 0 5px;
+                                        display: inline-block;
+                                        width: 7px;
+                                        height: 8px;
+                                        background: url(../images/minipop/sprite-minipop.png) no-repeat 0 -120px;
+                                    }
+                                }
+                                .num {
+                                    position: absolute;
+                                    right: 7px;
+                                    bottom: 0;
+                                }
+                            }
+                        }
+                        .txt-wrap {
+                            margin-left: 5px;
+                            width: 105px;
+                            height: 90px;
+                            overflow: hidden;
+                            float: left;
+                            vertical-align: middle;
+                            .caption {
+                                font-size: 14px;
+                                color: #000000;
+                                h3 {
+                                    font-weight: bold;
+                                    // width: 119px;
+                                    @extend .eps;
+                                }
+                            }
+                            .txt {
+                                font-size: 13px;
+                                color: #767676;
+                                span {
+                                    display: inline-block;
+                                    // @include hmeps;
+                                }
+                            }
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+            .film-center-wrap {
+                float: left;
+                width: 275px;
+                margin-left: 10px;
+                .film-b-wrap {
+                    margin-top: 0;
+                    ul {
+                        li {
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        .shopping-wrap {
+            .taobao-wrap {
+                float: left;
+                width: 570px;
+                .taobao-search {
+                    width: 100%;
+                    height: 67px;
+                }
+                
+            }
+            .shopping-content-wrap {
+                width: 100%;
+                .shopping-left-wrap {
+                    float: left;
+                    width: 293px;
+                    .shopping-a-wrap {
+                        position: relative;
+                        width: 293px;
+                        height: 132px;
+                        .pic {
+                            display: inline-block;
+                            img {
+                                width: 293px;
+                                height: 132px;
+                                display: block;
+                            }
+                        }
+                        .bg {
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            width: 100%;
+                            height: 23px;
+                            background: #000000;
+                            opacity: .7;
+                            .txt {
+                                display: block;
+                                width: 100%;
+                                line-height: 23px;
+                                color: #ffffff;
+                                text-align: center;
+                                padding: 0 3px;
+                                @extend .eps;
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                    .shopping-b-wrap {
+                        width: 100%;
+                        margin-top: 10px;
+                        ul {
+                            li {
+                                width: 100%;
+                                height: 80px;
+                                margin-bottom: 10px;
+                                .pic {
+                                    display: inline-block;
+                                    img {
+                                        width: 109px;
+                                        height: 80px;
+                                        display: inline-block;
+                                    }
+                                }
+                                .txt {
+                                    margin-left: 5px;
+                                    width: 160px;
+                                    display: inline-block;
+                                    font-size: 14px;
+                                    color: #118eea;
+                                    vertical-align: middle;
+                                    // @include hmeps;
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .shopping-center-wrap {
+                    float: left;
+                    margin-left: 12px;
+                    .shopping-c-wrap {
+                        width: 100%;
+                        ul {
+                            li {
+                                width: 100%;
+                                height: 70px;
+                                margin-bottom: 13px;
+                                overflow: hidden;
+                                .pic {
+                                    display: inline-block;
+                                    img {
+                                        width: 109px;
+                                        height: 70px;
+                                        display: inline-block;
+                                    }
+                                }
+                                .txt {
+                                    margin-left: 5px;
+                                    width: 140px;
+                                    display: inline-block;
+                                    font-size: 14px;
+                                    color: #118eea;
+                                    vertical-align: middle;
+                                    // @include hmeps(3);
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .shortvideo-wrap {
+            .shortvideo-content-wrap {
+                float: left;
+                width: 564px;
+                height: 420px;
+                overflow: hidden;
+                ul {
+                    li {
+                        float: left;
+                        width: 180px;
+                        height: 124px;
+                        margin-right: 12px;
+                        margin-bottom: 16px;
+                        &.mr0 {
+                            margin-right: 0;
+                        }
+                        .shortvideo-content {
+                            position: relative;
+                            width: 180px;
+                            height: 124px;
+                            overflow: hidden;
+                            .pic {
+                                display: inline-block;
+                                img {
+                                    width: 180px;
+                                    height: 124px;
+                                    display: block;
+                                    transition: all 0.5s;
+                                    &:hover {
+                                        transform: scale(1.2);
+                                    }
+                                }
+                            }
+                            .bg {
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                width: 100%;
+                                height: 23px;
+                                background: #000000;
+                                opacity: .7;
+                                .txt {
+                                    display: block;
+                                    width: 100%;
+                                    line-height: 23px;
+                                    color: #ffffff;
+                                    text-align: center;
+                                    padding: 0 3px;
+                                    @extend .eps;
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                            .btn-play {
+                                background: url(../images/minipop/btn-play.png) no-repeat;
+                                display: none;
+                                width: 61px;
+                                height: 61px;
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                margin-left: (-61px/2);
+                                margin-top: (-61px/2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .beauty-wrap {
+            .beauty-content-wrap {
+                float: left;
+                width: 564px;
+                height: 416px;
+                overflow: hidden;
+                ul {
+                    li {
+                        float: left;
+                        width: 180px;
+                        height: 196px;
+                        margin-right: 12px;
+                        margin-bottom: 12px;
+                        &.mr0 {
+                            margin-right: 0;
+                        }
+                        .beauty-content {
+                            position: relative;
+                            width: 180px;
+                            height: 196px;
+                            overflow: hidden;
+                            .pic {
+                                display: inline-block;
+                                img {
+                                    width: 100%;
+                                    height: 196px;
+                                    display: block;
+                                    transition: all 0.5s;
+                                    &:hover {
+                                        transform: scale(1.2);
+                                    }
+                                }
+                            }
+                            .tips {
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                color: #626262;
+                                width: 100%;
+                                height: 29px;
+                                line-height: 29px;
+                                font-size: 12px;
+                                background: #f1f1f1;
+                                opacity: .8;
+                                .user {
+                                    display: inline-block;
+                                    width: 110px;
+                                    @extend .eps;
+                                    i {
+                                        margin: 0 5px;
+                                        display: inline-block;
+                                        width: 11px;
+                                        height: 13px;
+                                        background: url(../images/minipop/sprite-minipop.png) no-repeat 0 -206px;
+                                        vertical-align: text-bottom;
+                                    }
+                                }
+                                .num {
+                                    position: absolute;
+                                    right: 0;
+                                    width: 80px;
+                                    padding-right: 10px;
+                                    text-align: right;
+                                    @extend .eps;
+                                    i {
+                                        margin: 0 5px;
+                                        display: inline-block;
+                                        width: 10px;
+                                        height: 14px;
+                                        background: url(../images/minipop/sprite-minipop.png) no-repeat 0 -255px;
+                                        vertical-align: text-bottom;
+                                    }
+                                }
+                            }
+                            .btn-play {
+                                background: url(../images/minipop/btn-play.png) no-repeat;
+                                display: none;
+                                width: 61px;
+                                height: 61px;
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                margin-left: (-61px/2);
+                                margin-top: (-61px/2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .live-wrap {
+            .live-content-wrap {
+                float: left;
+                width: 564px;
+                height: 416px;
+                overflow: hidden;
+                ul {
+                    li {
+                        float: left;
+                        width: 180px;
+                        height: 196px;
+                        margin-right: 12px;
+                        margin-bottom: 12px;
+                        &.mr0 {
+                            margin-right: 0;
+                        }
+                        .live-content {
+                            position: relative;
+                            width: 180px;
+                            height: 196px;
+                            overflow: hidden;
+                            .pic {
+                                display: inline-block;
+                                img {
+                                    width: 100%;
+                                    height: 196px;
+                                    display: block;
+                                    transition: all 0.5s;
+                                    &:hover {
+                                        transform: scale(1.2);
+                                    }
+                                }
+                            }
+                            .tips {
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                color: #626262;
+                                width: 100%;
+                                height: 49px;
+                                line-height: (49px/2);
+                                font-size: 12px;
+                                background: #f1f1f1;
+                                opacity: .8;
+                                p {
+                                    height: (49px/2);
+                                    line-height: (49px/2);
+                                }
+                                .info, .name {
+                                    margin-left: 5px;
+                                    display: inline-block;
+                                    color: #ff6000;
+                                }
+                                .info {
+                                    width: 105px;
+                                    @extend .eps;
+                                }
+                                .name {
+                                    position: absolute;
+                                    right: 0;
+                                    width: 80px;
+                                    text-align: right;
+                                    padding-right: 10px;
+                                    @extend .eps;
+                                }
+                                .user {
+                                    display: inline-block;
+                                    width: 110px;
+                                    @extend .eps;
+                                    i {
+                                        margin: 0 5px;
+                                        display: inline-block;
+                                        width: 11px;
+                                        height: 13px;
+                                        background: url(../images/minipop/sprite-minipop.png) no-repeat 0 -206px;
+                                        vertical-align: text-bottom;
+                                    }
+                                }
+                                .num {
+                                    position: absolute;
+                                    right: 0;
+                                    width: 80px;
+                                    text-align: right;
+                                    padding-right: 10px;
+                                    @extend .eps;
+                                    i {
+                                        margin: 0 5px;
+                                        display: inline-block;
+                                        width: 10px;
+                                        height: 14px;
+                                        background: url(../images/minipop/sprite-minipop.png) no-repeat 0 -255px;
+                                        vertical-align: text-bottom;
+                                    }
+                                }
+                            }
+                            .btn-play {
+                                background: url(../images/minipop/btn-play.png) no-repeat;
+                                display: none;
+                                width: 61px;
+                                height: 61px;
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                margin-left: (-61px/2);
+                                margin-top: (-61px/2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

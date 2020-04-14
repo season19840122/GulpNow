@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+    <title>5866 商城疗愈所</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/cure.css">
+  </head>
+	<body>
+    <div class="box size">
+      <div class="content-wrap">
+        <!-- <ul>
+          <li>
+            <div class="item">
+              <h4 class="name">胡一刀</h4>
+            </div>
+          </li>
+        </ul> -->
+      </div>
+
+      <div class="modal-wrap">
+        <div class="masklayer"></div>
+        <!-- light -->
+        <div id="dialog-light" class="dialog-wrap">
+          <i class="i-close"></i>
+          <div class="contents">
+            <input type="text" class="caption" readonly>
+            <textarea class="txt" id="" cols="30" rows="5" readonly></textarea>
+            <input type="text" class="p1" value="" readonly/>
+            <!-- <div class="btn-wrap">
+              <button class="btn-sure ti">发布</button>
+            </div> -->
+          </div>
+        </div>
+
+        <!-- dark -->
+        <div id="dialog-dark" class="dialog-wrap">
+          <i class="i-close"></i>
+          <div class="contents">
+            <input type="text" class="caption" placeholder="标题">
+            <textarea class="txt" id="" cols="30" rows="5" placeholder="内容......"></textarea>
+            <input type="text" class="p1" value="" placeholder="姓名"/>
+            <span class="error">标题、内容、姓名不能为空，请重填!</span>
+            <div class="btn-wrap">
+              <button class="btn-sure ti">发布</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 模板 -->
+    <script id="conTemplate" type="text/x-handlebars-template">
+      <ul>
+        {{#each con}}
+          {{#if (judge @index)}}
+            {{#if (judgeSelect @index)}}
+              <li class="on" data-caption="{{caption}}" data-content="{{content}}" data-name="{{name}}">
+                <div class="item">
+                  <h4 class="name" title="{{name}}">{{name}}</h4>
+                </div>
+              </li>
+            {{else}}
+              <li>
+                <div class="item">
+                  <h4 class="name"></h4>
+                </div>
+              </li>
+            {{/if}}
+          {{else}}
+            {{#if (judgeSelect @index)}}
+              <li class="on" style="margin-right: 0;" data-caption="{{caption}}" data-content="{{content}}" data-name="{{name}}">
+                <div class="item">
+                  <h4 class="name" title="{{name}}">{{name}}</h4>
+                </div>
+              </li>
+            {{else}}
+              <li style="margin-right: 0;">
+                <div class="item">
+                  <h4 class="name"></h4>
+                </div>
+              </li>
+            {{/if}}
+          {{/if}}
+        {{/each}}
+      </ul>
+      <a href="https://www.5866.com/" target="_blank" class="gift">
+        <img src="./images/cure/gift.png" alt="">
+      </a>
+    </script>
+      
+    <script src="scripts/base-cure.js"></script>
+    <script src="scripts/cure-data.js"></script>
+    <script src="scripts/cure.js"></script>
+
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?80f4eaf5643d9a87cb63f7dc3f3430d0";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </body>
+</html>

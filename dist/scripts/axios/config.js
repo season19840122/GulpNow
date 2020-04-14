@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default={method:"get",baseURL:"",headers:{"Content-Type":"application/json; charset=UTF-8"},timeout:1e4,withCredentials:!0,responseType:"json"};

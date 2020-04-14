@@ -1,0 +1,126 @@
+extends _layouts-mobile
+block title
+  title 常见问题
+block style
+  link(rel="stylesheet", href="styles/m-qna.css")
+block main
+  .content-wrap
+    nav
+      a(href="#account").active 账号绑定
+      a(href="#game") 赛事报名
+      a(href="#exchange") 兑换领奖
+      a(href="#software") 软件相关
+    .content
+      ul.ul-content#account
+        li
+          .item
+            h3 怎么才能参加火马电竞的比赛和活动？
+            ul.ul-item
+              li 登录平台支持的游戏，即可报名参加火马全民电竞的比赛和胜场有你活动；
+              li 如要参加战队赛，则需用微信或手机号认证你的游戏账号才可加入战队；
+              li 平台其它的部分特权活动，也会要求认证用户才能参加。
+        li
+          .item
+            h3 一个火马认证账号可以绑定几个游戏账号？
+            ul.ul-item
+              li 登录平台支持的游戏，即可报名参加火马全民电竞的比赛和胜场有你活动；
+              li 如要参加战队赛，则需用微信或手机号认证你的游戏账号才可加入战队；
+              li 平台其它的部分特权活动，也会要求认证用户才能参加。
+        li
+          .item
+            h3 怎么才能参加火马电竞的比赛和活动？
+            ul.ul-item
+              li 登录平台支持的游戏，即可报名参加火马全民电竞的比赛和胜场有你活动；
+              li 如要参加战队赛，则需用微信或手机号认证你的游戏账号才可加入战队；
+              li 平台其它的部分特权活动，也会要求认证用户才能参加。
+      ul.ul-content#game
+        li
+          .item
+            h3 game
+            ul.ul-item
+              li 登录平台支持的游戏，即可报名参加火马全民电竞的比赛和胜场有你活动；
+              li 如要参加战队赛，则需用微信或手机号认证你的游戏账号才可加入战队；
+              li 平台其它的部分特权活动，也会要求认证用户才能参加。
+        li
+          .item
+            h3 一个火马认证账号可以绑定几个游戏账号？
+            ul.ul-item
+              li 登录平台支持的游戏，即可报名参加火马全民电竞的比赛和胜场有你活动；
+              li 如要参加战队赛，则需用微信或手机号认证你的游戏账号才可加入战队；
+              li 平台其它的部分特权活动，也会要求认证用户才能参加。
+        li
+          .item
+            h3 怎么才能参加火马电竞的比赛和活动？
+            ul.ul-item
+              li 登录平台支持的游戏，即可报名参加火马全民电竞的比赛和胜场有你活动；
+              li 如要参加战队赛，则需用微信或手机号认证你的游戏账号才可加入战队；
+              li 平台其它的部分特权活动，也会要求认证用户才能参加。
+      ul.ul-content#exchange
+        li
+          .item
+            h3 exchange
+            ul.ul-item
+              li 登录平台支持的游戏，即可报名参加火马全民电竞的比赛和胜场有你活动；
+              li 如要参加战队赛，则需用微信或手机号认证你的游戏账号才可加入战队；
+              li 平台其它的部分特权活动，也会要求认证用户才能参加。
+        li
+          .item
+            h3 一个火马认证账号可以绑定几个游戏账号？
+            ul.ul-item
+              li 登录平台支持的游戏，即可报名参加火马全民电竞的比赛和胜场有你活动；
+              li 如要参加战队赛，则需用微信或手机号认证你的游戏账号才可加入战队；
+              li 平台其它的部分特权活动，也会要求认证用户才能参加。
+        li
+          .item
+            h3 怎么才能参加火马电竞的比赛和活动？
+            ul.ul-item
+              li 登录平台支持的游戏，即可报名参加火马全民电竞的比赛和胜场有你活动；
+              li 如要参加战队赛，则需用微信或手机号认证你的游戏账号才可加入战队；
+              li 平台其它的部分特权活动，也会要求认证用户才能参加。
+      ul.ul-content#software
+        li
+          .item
+            h3 software
+            ul.ul-item
+              li 登录平台支持的游戏，即可报名参加火马全民电竞的比赛和胜场有你活动；
+              li 如要参加战队赛，则需用微信或手机号认证你的游戏账号才可加入战队；
+              li 平台其它的部分特权活动，也会要求认证用户才能参加。
+        li
+          .item
+            h3 一个火马认证账号可以绑定几个游戏账号？
+            ul.ul-item
+              li 登录平台支持的游戏，即可报名参加火马全民电竞的比赛和胜场有你活动；
+              li 如要参加战队赛，则需用微信或手机号认证你的游戏账号才可加入战队；
+              li 平台其它的部分特权活动，也会要求认证用户才能参加。
+        li
+          .item
+            h3 怎么才能参加火马电竞的比赛和活动？
+            ul.ul-item
+              li 登录平台支持的游戏，即可报名参加火马全民电竞的比赛和胜场有你活动；
+              li 如要参加战队赛，则需用微信或手机号认证你的游戏账号才可加入战队；
+              li 平台其它的部分特权活动，也会要求认证用户才能参加。
+append script
+  script(src="scripts/jquery.scrollTo.min.js")
+  script.
+    (function($){
+      $('body').on('click', 'nav a', function(){
+        $(this).addClass('active').siblings().removeClass('active');
+      })
+
+      $('[href="#account"]').on("click",function(e){
+        $.scrollTo(0, 800);
+      });
+
+      $('[href="#game"]').on("click",function(e){
+        $.scrollTo($('#game').offset().top - 43, 800);
+      });
+
+      $('[href="#exchange"]').on("click",function(e){
+        $.scrollTo($('#exchange').offset().top - 43, 800);
+      });
+
+      $('[href="#software"]').on("click",function(e){
+        $.scrollTo($('#software').offset().top - 43, 800);
+      });
+    })(jQuery);
+      

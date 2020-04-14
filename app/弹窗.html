@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> </title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <link rel="stylesheet" href="styles/public.css">
+    <script>
+      var localUrl = "https://www.5866.com/", staticUrl = "//mallstatic.5866.com/", picUrl = "https://pic.5866.com/upmall/";
+      
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?80f4eaf5643d9a87cb63f7dc3f3430d0";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+      
+    </script>
+  </head>
+  <body>
+    
+    
+    
+    <p>显示弹窗：$('#id').modal('show')</p>
+    <p>显示弹窗：$('#id').modal('hide')</p>
+    <p>提示弹窗调用方法：pubgUtils.showTip('内容',function(){alert('334')})</p>
+    <p>自动关闭文字提示：pubgUtils.toast('内容')</p>
+    <p>成功提示弹窗：</p>
+    <textarea style="width:400px;height:120px;">pubgUtils.modalResultTip({
+ isSucc: true,
+ title:'已提交退款申请成功',
+ isCloseBtn: false,  // 是否显示“好的，知道了”按钮
+ msg:'请等待我们客服小姐姐审核吧~',
+ btnText:'好的，知道了',
+ btnCall: function(){}  // 点击按钮回调
+})</textarea>
+    <p>失败提示弹窗：</p>
+    <textarea style="width:400px;height:120px;">pubgUtils.modalResultTip({
+ isSucc: false,
+ title: '订单提交失败',
+ msg: '订单提交失败，请联系客服处理~',
+ isCloseBtn: false,
+ btnText: '联系客服',
+ btnCall: function(){
+   window.location.href = 'https://gamelife.swjoy.com/';
+ }
+})</textarea><br>
+    <button id="btn01" type="button">自动关闭提示</button>
+    <button id="btn02" type="button">插件提示弹窗</button>
+    <button id="btn03" type="button">插件提示弹窗（带回调）</button>
+    <button id="btn04" type="button">插件提示弹窗（带html,无回调，自定义按钮文字）</button>
+    <hr>
+    <button type="button" data-toggle="modal" data-target="#Js_sw_login">顺网通行证登录</button>
+    
+    <div class="modal fade" id="Js_sw_login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content modal-login-reg">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="iframe-wrap">
+              <iframe src="sso/login.html" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+              <div class="login-loading" id="loginLoading"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="modal fade" id="Js_sw_reg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+            <h4 class="modal-title" id="myModalLabel4"></h4>
+          </div>
+          <div class="modal-body modal-reg">
+            <h2 class="modal-reg-title">注册顺网通行证</h2>
+            <div class="error">错误反馈提示！</div>
+            <div class="phone-num">
+              <label for="phone_num_input">手机号</label>
+              <input id="phone_num_input" type="text" placeholder="请输入11位手机号">
+            </div>
+            <div class="valid-code">
+              <input class="text-s" type="text" placeholder="请输入右侧验证码"><a href="#" title="换一张"><img src="http://via.placeholder.com/100x40" width="90" height="40"></a><a class="btn-change" href="#">换一张</a>
+            </div>
+            <div class="valid-code">
+              <input type="text" placeholder="请输入短信验证码">
+              <button id="js_valid_codebtn">发送验证码</button>
+            </div>
+            <p class="sw-protocol">我已看过并同意顺网账号<a href="https://passport.kedou.com/front/noLogin/agreeMent.jsp" target="_blank">《用户使用协议》</a></p>
+            <div><a class="modal-btn-reg" href="#">注册</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="modal fade" id="js_phone_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel8" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+            <h4 class="modal-title" id="myModalLabel8"></h4>
+          </div>
+          <div class="modal-body modal-reg">
+            <h2 class="modal-reg-title">绑定手机号</h2>
+            <div class="error">错误反馈提示！</div>
+            <div class="phone-num">
+              <label for="phone_num_input">手机号</label>
+              <input id="phone_num_input_bind" type="text" placeholder="请输入11位手机号">
+            </div>
+            <div class="valid-code">
+              <input type="text" placeholder="请输入验证码">
+              <button class="disabled" id="js_valid_codebtn_bind">重新发送34s</button>
+            </div>
+            <div><a class="modal-btn-reg" href="#">绑定</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="modal fade" id="js_record_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" data-backdrop="static">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header modal-record-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+            <h4 class="modal-title" id="myModalLabel2">购买记录</h4>
+          </div>
+          <div class="modal-body modal-record-body">
+            <div class="table-wrap">
+              <table width="100%" border="1">
+                <thead>
+                  <tr>
+                    <td>购买时间</td>
+                    <td>激活码</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2017-09-19 21:09</td>
+                    <td>
+                      <input class="code" type="text" readonly value="LKJ3H-D7HGY-D7HGY-D7HGY" data-copy="copy001">
+                    </td>
+                    <td><a class="js-copy-code" href="#" data-copytarget="copy001">复制</a></td>
+                    <td><a class="active-code active-code-red js_active_code" href="#active_step">去激活</a></td>
+                  </tr>
+                  <tr>
+                    <td>2017-09-19 21:09</td>
+                    <td>(泡泡)
+                      <input class="code" type="text" readonly value="LKJ3H-D7HGY-D7HGY-D7HGY" data-copy="copy002">
+                    </td>
+                    <td><a class="js-copy-code" href="#" data-copytarget="copy002">复制</a></td>
+                    <td><a class="active-code active-code-red js_active_code" href="#active_step">去激活</a></td>
+                  </tr>
+                  <tr>
+                    <td>2017-09-19 21:09</td>
+                    <td>
+                      <input class="code" type="text" readonly value="LKJ3H-D7HGY-D7HGY-D7HGY" data-copy="copy003">
+                    </td>
+                    <td><a class="js-copy-code" id="copyBtn" href="#" data-copytarget="copy003">复制</a></td>
+                    <td><a class="active-code active-code-red js_active_code" href="#active_step">去激活</a></td>
+                  </tr>
+                  <tr>
+                    <td>2017-09-19 21:09</td>
+                    <td>
+                      <input class="code" type="text" readonly value="LKJ3H-D7HGY-D7HGY-D7HGY" data-copy="copy004">
+                    </td>
+                    <td><a class="js-copy-code" href="#" data-copytarget="copy004">复制</a></td>
+                    <td><a class="active-code active-code-red js_active_code" href="#active_step">去激活</a></td>
+                  </tr>
+                  <tr>
+                    <td>2017-09-19 21:09</td>
+                    <td>
+                      <input class="code" type="text" readonly value="LKJ3H-D7HGY-D7HGY-D7HGY" data-copy="copy005">
+                    </td>
+                    <td><a class="js-copy-code" href="#" data-copytarget="copy005">复制</a></td>
+                    <td><a class="active-code active-code-red js_active_code" href="#active_step">去激活</a></td>
+                  </tr>
+                  <tr>
+                    <td>2017-09-19 21:09</td>
+                    <td>
+                      <input class="code" type="text" readonly value="LKJ3H-D7HGY-D7HGY-D7HGY" data-copy="copy006">
+                    </td>
+                    <td><a class="js-copy-code" href="#" data-copytarget="copy006">复制</a></td>
+                    <td><a class="active-code active-code-red js_active_code" href="#active_step">去激活</a></td>
+                  </tr>
+                  <tr>
+                    <td>2017-09-19 21:09</td>
+                    <td>
+                      <input class="code" type="text" readonly value="LKJ3H-D7HGY-D7HGY-D7HGY" data-copy="copy007">
+                    </td>
+                    <td><a class="js-copy-code" href="#" data-copytarget="copy007">复制</a></td>
+                    <td><a class="active-code active-code-red js_active_code" href="#active_step">去激活</a></td>
+                  </tr>
+                  <tr>
+                    <td>2017-09-19 21:09</td>
+                    <td>
+                      <input class="code" type="text" readonly value="LKJ3H-D7HGY-D7HGY-AAAAA" data-copy="copy008">
+                    </td>
+                    <td><a class="js-copy-code" href="#" data-copytarget="copy008">复制</a></td>
+                    <td><a class="active-code active-code-red js_active_code" href="#active_step">去激活</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-page"><a class="btn btn-prev btn-disabled" href="#">上一页</a><a class="btn active" href="#">1</a><a class="btn" href="#">2</a><a class="btn" href="#">3</a><a class="btn" href="#">4</a><a class="btn" href="#">5</a><span>... </span><a class="btn" href="#">15</a><a class="btn btn-next" href="#">下一页</a></div>
+        </div>
+      </div>
+    </div>
+    
+    <button id="payModalBtn" type="button">支付二维码</button>
+    
+    <div class="modal fade" id="js_code_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" id="payModalClose" type="button"></button>
+          </div>
+          <div class="modal-body modal-code">
+            <h2 class="modal-body-title">请用微信或支付宝扫一扫付款</h2>
+            <div class="qrcode-pic"><img src="images/footer-qrcode.png" alt="">
+              <div class="qrcode-refresh"></div>
+            </div>
+            <div class="qrcode-box">
+              <div class="qrcode" id="qrcode"></div>
+              <div class="qrcode-refresh" id="qrcodeRefresh"></div>
+            </div>
+            <div class="price">支付金额：<span>88.00</span> 元
+              
+            </div>
+            <div class="tips">购买后不支持退款</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <button type="button" data-toggle="modal" data-target="#Js_tips_modal">提示</button>
+    
+    <div class="modal fade" id="Js_tips_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header modal-tips-header">
+            <h4 class="modal-title" id="myModalLabel5">提示</h4>
+          </div>
+          <div class="modal-body modal-tips">
+            <p>请绑定手机，购买成功后PUBG激活码将以短信形式发送至您的手机</p>
+          </div>
+          <div class="modal-footer modal-tips-footer"><a class="btn" href="#" type="button">确定</a><a class="btn" href="#" type="button" data-dismiss="modal">取消</a></div>
+        </div>
+      </div>
+    </div>
+    <button type="button" data-toggle="modal" data-target="#Js_buy_paopao">购买选择-泡泡加速器</button>
+    
+    <div class="modal fade" id="Js_buy_paopao" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" data-backdrop="static">
+      <div class="modal-dialog modal-md2" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body modal-amount">
+              <div class="modal-amount-title">泡泡加速器</div>
+              <div class="modal-amount-body">
+                <div class="item">
+                  <div class="hd">当前账号：</div>
+                  <div class="bd">SJ_17775201095</div>
+                </div>
+                <div class="item">
+                  <div class="hd">购买数量：</div>
+                  <div class="bd">
+                    <label class="ui-radio">
+                      <input type="radio" name="paopao_quantity" checked><span>1小时</span>
+                    </label>
+                    <label class="ui-radio">
+                      <input type="radio" name="paopao_quantity"><span>3小时</span>
+                    </label>
+                    <label class="ui-radio">
+                      <input type="radio" name="paopao_quantity"><span>1个月</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="hd">应付金额：</div>
+                  <div class="bd"><span class="now-price"><strong>1</strong> 元</span><span class="default-price">官方价格：3元</span></div>
+                </div>
+                <div class="btn-group"><a class="confirm-btn" href="#">确认</a><a class="cancel-btn" href="#" data-dismiss="modal">取消 </a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" data-toggle="modal" data-target="#Js_buy_key">购买选择-钥匙</button>
+    
+    <div class="modal fade" id="Js_buy_key" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" data-backdrop="static">
+      <div class="modal-dialog modal-md2" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body modal-amount">
+              <div class="modal-amount-title">EARLY BIRD KEY</div>
+              <div class="modal-amount-body">
+                <div class="item">
+                  <div class="hd">当前账号：</div>
+                  <div class="bd">SJ_17775201095</div>
+                </div>
+                <div class="item">
+                  <div class="hd">购买数量：</div>
+                  <div class="bd">
+                    <label class="ui-radio">
+                      <input type="radio" name="key_quantity" checked><span>1个</span>
+                    </label>
+                    <label class="ui-radio">
+                      <input type="radio" name="key_quantity"><span>5个</span>
+                    </label>
+                    <label class="ui-radio">
+                      <input type="radio" name="key_quantity"><span>10个</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="hd">应付金额：</div>
+                  <div class="bd"><span class="now-price"><strong>15</strong> 元</span><span class="default-price">官方价格：18元</span></div>
+                </div>
+                <div class="discounts">买任意钥匙，送24小时泡泡加速器</div>
+                <div class="btn-group"><a class="confirm-btn" href="#">确认</a><a class="cancel-btn" href="#" data-dismiss="modal">取消 </a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="modal fade" id="Js_code_tips_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header modal-tips-header">
+            <h4 class="modal-title" id="myModalLabel5">提示</h4>
+          </div>
+          <div class="modal-body modal-tips">
+            <p>您购买的激活码：</p>
+            <input class="code" type="text" value="AdS3FDafS5DFdas5DKSs5aSFff" data-copy="modalcopy" readonly>
+            <p>已发送至手机，您可以在订单记录里查看</p>
+          </div>
+          <div class="modal-footer modal-tips-footer"><a class="btn" id="modalCopyBtn" href="#" type="button" data-copytarget="modalcopy">复制激活码</a><a class="btn" href="#" type="button" data-dismiss="modal">关闭</a></div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <button type="button" data-toggle="modal" data-target="#Js_buy_succ">购买成功</button>
+    
+    <div class="modal fade" id="Js_buy_succ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" data-backdrop="static">
+      <div class="modal-dialog modal-md2" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body modal-buy-succ">
+            <div class="hd">购买成功</div>
+            <div class="bd"> 
+              <div class="succ-item">
+                <div class="buy-type">您购买的 <strong>EARLY BIRD KEY *5</strong></div>
+                <div class="buy-code"> 
+                  <input class="code" type="text" name="" value="FI33F-SG462-52JHD-FI33F-SG462-52JHD" data-copy="succ-copy01" readonly><a class="copy-btn" href="#" data-copytarget="succ-copy01">复制</a>
+                </div>
+              </div>
+              <div class="succ-item">
+                <div class="buy-type">您购买的 <strong>24小时泡泡加速器体验卡*1</strong></div>
+                <div class="buy-code"> 
+                  <input class="code" type="text" name="" value="FI33F-SG462-52JHD-FI33F-SG462-12345" data-copy="succ-copy02" readonly><a class="copy-btn" href="#" data-copytarget="succ-copy02">复制</a>
+                </div>
+              </div>
+              <div class="succ-item">
+                <p>您已参加过购买钥匙送24小时加速器活动     </p>
+              </div>
+              <div class="succ-item">
+                <div class="buy-type">您购买的 <strong>EARLY BIRD KEY *5</strong></div>
+                <div class="buy-account"> 
+                  <div class="text-item">账号：QWERTYUIOPQWERT</div>
+                  <div class="text-item">密码：QWERTYUIOPQWERT                      </div>
+                  <input class="code" type="text" name="" value="账号：QWERTYUIOPQWERT 密码：AAERTYUIOPQWERT" readonly data-copy="succ-copy03"><a class="copy-btn" href="#" data-copytarget="succ-copy03">复制</a>
+                </div>
+              </div>
+            </div>
+            <div class="foot">(您可以在订单记录里查看，复制相关激活码)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    
+    <button type="button" data-toggle="modal" data-target="#Js_service_tel">客服填手机弹窗</button>
+    
+    <div class="modal fade" id="Js_service_tel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-result">
+              <div class="msg-head">联系客服</div>
+              <p>留下你的联系方式，让我们更好地为你服务</p>
+            </div>
+            <div class="modal-form-row">
+              <input class="ui-input service-tel-input" type="text" name="" placeholder="请输入手机号"><a class="btn" href="#">提交</a>
+            </div>
+            <div class="error-tip" style="display:block;">请输入正确的手机号码</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    
+    
+    <div class="modal fade" id="Js_quick_login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content modal-login-reg">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+            <h4 class="modal-title" id="myModalLabel1"></h4>
+          </div>
+          <div class="modal-body">
+            <div class="quick-login-wrap" id="quickLoginWrap"><span class="quick-title">快捷购买</span><a class="quick-to-login" id="quickToLogin" href="#">手机登录</a>
+              <form class="quick-body" method="post" action="">
+                <div class="error-tip">两次输入手机号不一致</div>
+                <div class="tel-input">
+                  <input type="text" name="" placeholder="仅支持中国大陆手机号码">
+                </div>
+                <div class="tel-input">
+                  <input type="text" name="" placeholder="请再次输入您的手机号码" onpaste="return false">
+                </div>
+                <div class="desc">温馨提示：手机号码是商品激活码的重要发放通道，请确保手机号码填写正确</div>
+                <input class="quick-submit" type="submit" value="提交订单">
+              </form>
+            </div>
+            <div class="iframe-wrap" id="qLoginWrap" style="display:none;"><a class="login-to-quick" id="loginToQuick" href="#">快捷购买 </a>
+              <iframe src="sso/login.html" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <button type="button" data-toggle="modal" data-target="#Js_welfare_succ">福利社参与成功</button>
+    
+    <div class="modal fade" id="Js_welfare_succ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-result">
+              <div class="msg-head"><i class="icon-succ"></i>您已成功参与</div>
+              <p>中奖结果会在活动结束后3个工作日公布</p>
+            </div>
+          </div>
+          <div class="modal-footer"><a class="btn" href="#" data-dismiss="modal" aria-label="Close">好的，知道了</a></div>
+        </div>
+      </div>
+    </div>
+    <button type="button" data-toggle="modal" data-target="#Js_welfare_result">福利社中奖结果</button>
+    
+    <div class="modal fade" id="Js_welfare_result" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="m-title">本期抽中用户如下</div>
+            <div class="welfare-result">
+              <div class="welfare-result-head"> <span class="w01">用户名</span><span class="w02">参与活动时间</span></div>
+              <div class="welfare-result-list">
+                <table cellpadding="0" cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <td class="w01">131*******7</td>
+                      <td class="w02">2018年10月24日</td>
+                    </tr>
+                    <tr>
+                      <td class="w01">131*******7</td>
+                      <td class="w02">2018年10月24日</td>
+                    </tr>
+                    <tr>
+                      <td class="w01">131*******7</td>
+                      <td class="w02">2018年10月24日</td>
+                    </tr>
+                    <tr>
+                      <td class="w01">131*******7</td>
+                      <td class="w02">2018年10月24日</td>
+                    </tr>
+                    <tr>
+                      <td class="w01">131*******7</td>
+                      <td class="w02">2018年10月24日</td>
+                    </tr>
+                    <tr>
+                      <td class="w01">131*******7</td>
+                      <td class="w02">2018年10月24日</td>
+                    </tr>
+                    <tr>
+                      <td class="w01">131*******7</td>
+                      <td class="w02">2018年10月24日</td>
+                    </tr>
+                    <tr>
+                      <td class="w01">131*******7</td>
+                      <td class="w02">2018年10月24日</td>
+                    </tr>
+                    <tr>
+                      <td class="w01">131*******7</td>
+                      <td class="w02">2018年10月24日</td>
+                    </tr>
+                    <tr>
+                      <td class="w01">131*******7</td>
+                      <td class="w02">2018年10月24日</td>
+                    </tr>
+                    <tr>
+                      <td class="w01">131*******7</td>
+                      <td class="w02">2018年10月24日</td>
+                    </tr>
+                    <tr>
+                      <td class="w01">131*******7</td>
+                      <td class="w02">2018年10月24日</td>
+                    </tr>
+                    <tr>
+                      <td class="w01">131*******7</td>
+                      <td class="w02">2018年10月24日</td>
+                    </tr>
+                    <tr>
+                      <td class="w01">131*******7</td>
+                      <td class="w02">2018年10月24日</td>
+                    </tr>
+                    <tr>
+                      <td class="w01">131*******7</td>
+                      <td class="w02">2018年10月24日</td>
+                    </tr>
+                    <tr>
+                      <td class="w01">131*******7</td>
+                      <td class="w02">2018年10月24日</td>
+                    </tr>
+                    <tr>
+                      <td class="w01">131*******7</td>
+                      <td class="w02">2018年10月24日</td>
+                    </tr>
+                    <tr>
+                      <td class="w01">131*******7</td>
+                      <td class="w02">2018年10月24日</td>
+                    </tr>
+                    <tr>
+                      <td class="w01">131*******7</td>
+                      <td class="w02">2018年10月24日</td>
+                    </tr>
+                    <tr>
+                      <td class="w01">131*******7</td>
+                      <td class="w02">2018年10月24日</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer"><a class="btn" href="#">联系客服</a></div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <button type="button" data-toggle="modal" data-target="#Js_order_fail">订单提交失败</button>
+    
+    <div class="modal fade" id="Js_order_fail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-result">
+              <div class="msg-head"><i class="icon-fail"></i>订单提交失败</div>
+              <p>订单提交失败，请联系客服处理</p>
+            </div>
+          </div>
+          <div class="modal-footer"><a class="btn" href="#">联系客服</a></div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    
+    <button type="button" data-toggle="modal" data-target="#Js_apply_free">申请免费拿填手机</button>
+    
+    <div class="modal fade" id="Js_apply_free" tabindex="-1" role="dialog" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-result">
+              <div class="msg-head"><i class="icon-apply-free"></i>申请免费拿资格</div>
+              <p>留下你的联系方式，参与活动</p>
+            </div>
+            <div class="modal-form-row">
+              <input class="ui-input service-tel-input" type="text" name="" placeholder="请输入手机号"><a class="btn" href="#">提交申请</a>
+            </div>
+            <div class="error-tip" style="display:block;">请输入正确的手机号码</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    
+    <button type="button" data-toggle="modal" data-target="#Js_explain">确认购买时说明弹窗</button>
+    <div class="modal fade" id="Js_explain" tabindex="-1" role="dialog" data-backdrop="static">
+      <div class="modal-dialog modal-explain" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-explain-box">
+              <div class="content">
+                <p>sasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfs</p><img src="images/banner02.jpg" alt="">
+                <p>sasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfs</p>
+                <p>sasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfs</p>
+                <p>sasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfs</p>
+                <p>sasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfs</p>
+                <p>sasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfssasfs</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer"><a class="btn" href="#" data-dismiss="modal" aria-label="Close">好的，知道了</a></div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    
+    <button type="button" data-toggle="modal" data-target="#Js_send_account">发号申请</button>
+    <div class="modal fade" id="Js_send_account" tabindex="-1" role="dialog" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-result">
+              <div class="msg-head"><i class="icon-send-account"></i>立即申请拿码</div>
+              <p>留下你的联系方式，提交拿码</p>
+            </div>
+            <div class="modal-form-row">
+              <input class="ui-input service-tel-input" type="text" name="" placeholder="请输入手机号"><a class="btn" href="#">提交申请</a>
+            </div>
+            <div class="error-tip" style="display:block;">请输入正确的手机号码  </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <button type="button" data-toggle="modal" data-target="#Js_send_account_succ">发号成功</button>
+    <div class="modal fade" id="Js_send_account_succ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-result">
+              <div class="msg-head"><i class="icon-succ"></i>你已成功抢到激活码</div>
+              <p>获得的游戏KEY:12345678910123456789101234567891012345678910</p>
+            </div>
+          </div>
+          <div class="modal-footer"><a class="btn-cancel" href="#" data-dismiss="modal" aria-label="Close">好的，知道了</a><a class="btn" href="#" target="_blank">立即去兑换</a></div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    
+    <button type="button" data-toggle="modal" data-target="#Js_gold_detail">金币详情</button>
+    <div class="modal fade" id="Js_gold_detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-gold-detail">
+              <table cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <th>测试：</th>
+                    <td>英雄联盟/电信/艾欧尼亚</td>
+                  </tr>
+                  <tr>
+                    <th>游戏区服：</th>
+                    <td>英雄联盟/电信/艾欧尼亚</td>
+                  </tr>
+                  <tr>
+                    <th>游戏账号：</th>
+                    <td>1231234</td>
+                  </tr>
+                  <tr>
+                    <th>游戏密码：</th>
+                    <td>431231232421444444444442222222222222222222222222222222</td>
+                  </tr>
+                  <tr>
+                    <th>密保问题：</th>
+                    <td> 
+                      <ul class="pwd-safe">
+                        <li>小学老师叫什么？/小学老师/您的小学</li>
+                        <li>小学老师叫什么？/小学老师/您的小学</li>
+                        <li>老师叫什么？/小学老师/</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer"><a class="btn" href="#" data-dismiss="modal" aria-label="Close">好的，知道了</a></div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    
+    <button id="cfPayModalBtn" type="button">cf支付二维码</button>
+    
+    <div class="modal fade" id="js_cf_code_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" id="cfPayModalClose" type="button"></button>
+          </div>
+          <div class="modal-body modal-code">
+            <h2 class="modal-body-title">请使用<span class="weixin">微信</span>扫一扫付款</h2>
+            <div class="qrcode-box">
+              <div class="qrcode" id="qrcode"></div>
+              <div class="qrcode-refresh" id="qrcodeRefresh">刷新获取二维码</div>
+            </div>
+            <div class="order-info">
+              <div class="price">支付金额：<span>88.00</span> 元</div>
+              <p>QQ号：1002892</p>
+              <p>游戏区服：电信二区 某某某某某某</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" data-toggle="modal" data-target="#Js_cf_succ">cf购买成功</button>
+    
+    <div class="modal fade" id="Js_cf_succ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-result">
+              <div class="msg-head"><i class="icon-succ"></i>购买成功</div>
+              <p>请您5分钟后登录账号查看充值状态吧！</p>
+            </div>
+          </div>
+          <div class="modal-footer"><a class="btn" href="#" data-dismiss="modal" aria-label="Close">好的，知道了</a></div>
+        </div>
+      </div>
+    </div>
+    
+    <hr>
+    <button type="button" data-toggle="modal" data-target="#Js_uc_detail">个人中心查看详情</button>
+    
+    <div class="modal fade" id="Js_uc_detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content uc-modal-detail">
+          <div class="modal-detail-group"><i class="arrow-top"></i><i class="arrow-bottom"></i>
+            <div class="modal-body">
+              <div class="box01">
+                <div class="d-item"><span class="hd">产品名</span><span class="bd">绝地求生激活码绝地求生激活码绝地求生激活码绝地求生激活码绝地求生激活码绝地求生激活码</span></div>
+                <div class="d-item"><span class="hd">规  格</span><span class="bd">X1</span></div>
+                <div class="d-item"><span class="hd">详  情</span><span class="bd">文字文字文字文字文字文字文字4444444444432222222222222222222222222222256</span></div>
+              </div>
+              <div class="box02">
+                <div class="d-item"><span class="hd">租号有效期</span><span class="bd">2018.08.28</span></div>
+                <div class="d-item"><span class="hd">下单时间-结束时间</span><span class="bd">2018.08.20-2018.08.28</span></div>
+              </div>
+            </div>
+            <div class="modal-footer"><a class="btn-cancel" href="#" data-dismiss="modal" aria-label="Close">好的，知道了  </a><a class="btn" href="#">查看如何使用  </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <button id="modalSuccBtn" type="button">提交退款申请（插件-成功）</button>
+    <button id="modalFailBtn" type="button">提交退款申请（插件-失败）</button>
+    
+    <button id="payModalBtn" type="button" data-toggle="modal" data-target="#Js_uc_pay">后台支付（2）</button>
+    <div class="modal fade" id="Js_uc_pay" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content modal-code-group" id="modalCodeGroup">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-code-head"><span class="active">微信</span><span>支付宝</span></div>
+          </div>
+          <div class="modal-body modal-code">
+            <h2 class="modal-body-title-xs">请用<span class="weixin-xs">微信</span>扫一扫付款</h2>
+            <div class="qrcode-box">
+              <div class="qrcode"></div>
+              <div class="qrcode-refresh"></div>
+            </div>
+            <div class="price">支付金额：<span>88.00</span> 元</div>
+          </div>
+          <div class="modal-body modal-code" style="display:none;">
+            <h2 class="modal-body-title-xs">请用<span class="alipay-xs">支付宝</span>扫一扫付款</h2>
+            <div class="qrcode-box">
+              <div class="qrcode"></div>
+              <div class="qrcode-refresh"></div>
+            </div>
+            <div class="price">支付金额：<span>88.00</span> 元</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="payModalBtn" type="button" data-toggle="modal" data-target="#Js_uc_pay_weixin">后台支付（微信）</button>
+    <div class="modal fade" id="Js_uc_pay_weixin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body modal-code">
+            <h2 class="modal-body-title-xs">请用<span class="weixin-xs">微信</span>扫一扫付款</h2>
+            <div class="qrcode-pic"><img src="images/footer-qrcode.png" alt="">
+              <div class="qrcode-refresh"></div>
+            </div>
+            <div class="qrcode-box">
+              <div class="qrcode"></div>
+              <div class="qrcode-refresh"></div>
+            </div>
+            <div class="price">支付金额：<span>88.00</span> 元</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="payModalBtn" type="button" data-toggle="modal" data-target="#Js_uc_pay_alipay">后台支付（支付宝）</button>
+    <div class="modal fade" id="Js_uc_pay_alipay" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body modal-code">
+            <h2 class="modal-body-title-xs">请用<span class="alipay-xs">支付宝</span>扫一扫付款</h2>
+            <div class="qrcode-pic"><img src="images/footer-qrcode.png" alt="">
+              <div class="qrcode-refresh"></div>
+            </div>
+            <div class="qrcode-box">
+              <div class="qrcode"></div>
+              <div class="qrcode-refresh"></div>
+            </div>
+            <div class="price">支付金额：<span>88.00</span> 元</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <button id="shippingModalBtn" type="button">发货信息</button>
+    
+    
+    <div class="modal fade" id="modalRights" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body modal-rights-group">
+            <div class="inform">温馨提示：提交后此订单将被锁定，无法继续体验游戏！</div>
+            <div class="rights-type">
+              <select class="ui-select" name="">
+                <option value="" selected>投诉类型</option>
+                <option value="">11111</option>
+                <option value="">222</option>
+              </select>
+            </div>
+            <div class="error-tip" style="display:block;">请选择投诉类型</div>
+            <div class="rights-msg">
+              <textarea name="" rows="" cols="" placeholder="投诉内容" maxlength="1000"></textarea>
+            </div>
+            <div class="error-tip" style="display:block;">请填写投诉内容</div>
+            <div class="rights-photos-group">
+              <div class="rights-photos"></div>
+              <div class="number-info">共<strong>0</strong>张，还能上传<strong>5</strong>张</div>
+            </div>
+            <div class="error-tip" id="uploadError"></div>
+            <div class="rights-pro">
+              <p>手机号：15888811113</p>
+              <p>购买KEY：1000010001</p>
+            </div>
+            <div class="modal-footer"><a class="btn" href="#">提交维权 </a><a class="btn btn-loading" href="#">正在提交... </a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    
+    <button id="modalGiftApplyBtn" type="button">礼包系统申请弹窗</button>
+    <div class="modal fade" id="modalGiftApply" tabindex="-1" role="dialog" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-result">
+              <div class="msg-head"><i class="icon-send-account"></i>立即申请拿码 </div>
+              <p>留下你的联系方式，提交拿码</p>
+            </div>
+            <div class="modal-form-group" id="giftApply">
+              <div class="col">
+                <div class="hd">手机号码</div>
+                <div class="bd"> 
+                  <input class="ui-input" type="text" name="tel" placeholder="请输入手机号">
+                  <div class="error-tip" style="display:block;">请输入正确的手机号码</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="hd">领取QQ</div>
+                <div class="bd"> 
+                  <input class="ui-input" type="text" name="qq" placeholder="请输入QQ号">
+                  <div class="error-tip" style="display:block;">请输入正确的QQ号</div>
+                </div>
+              </div><a class="btn" id="modalGiftApplySubmit" href="#">提交申请</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/libs.js"></script>
+    <script src="scripts/modules/shippingSlider.js"></script>
+    <script>
+      $(function(){
+      
+        if(typeof staticUrl == 'undefined'){  // staticUrl为静态资源地址
+          staticUrl = location.href.substring(0,location.href.lastIndexOf('/'))+'/'
+        }else{
+          staticUrl = staticUrl
+        }
+      
+        // IE8下单选按钮
+        if(pubgUtils.isIE8()){
+          $('.ui-radio input:checked').parent().addClass('active')
+          $('body').on('click','.ui-radio',function(){
+            $(this).addClass('active').siblings('label').removeClass('active');
+          })
+        }
+        // 注册弹窗
+        $('input[placeholder]').placeholder();
+        
+        // 二维码示例
+        var payQrcodeTimer
+        function createQrcode(){
+          $('#qrcode').html('');
+          $('#qrcodeRefresh').hide();
+          var qrType = pubgUtils.isIE8() ? 'table' : 'canvas';
+          $('#qrcode').qrcode({
+            width: 150,
+            height: 150,
+            render  : qrType,
+            correctLevel  : 0,  // 二维码容错等级[0|1|2|3]
+            text: "http://mall.swgamelife.com/payExchange/qrcode?id=GLPBGUKEY20180313090749302MHQXIH"
+          });   
+          payQrcodeTimer = setTimeout(function(){
+            $('#qrcodeRefresh').show();
+          }, 3000)     // 实际是5分钟失效，300000           
+        }
+        $('#payModalBtn').on('click', function(){
+          $('#js_code_modal').modal('show');
+          createQrcode();
+        })
+        $('#payModalClose').on('click', function(){
+          $('#js_code_modal').modal('hide');
+          clearTimeout(payQrcodeTimer);
+          return false;
+        })
+        $('#qrcodeRefresh').on('click',function(){
+          createQrcode();
+        })
+        
+        // cf支付二维码（二维显示逻辑参照原来的支付流程）
+        $('#cfPayModalBtn').on('click', function(){
+          $('#js_cf_code_modal').modal('show');
+          // createQrcode();
+        })
+        $('#cfPayModalClose').on('click', function(){
+          $('#js_cf_code_modal').modal('hide');
+          // clearTimeout(payQrcodeTimer);
+          return false;
+        })
+      
+      
+      
+        // 复制激活码
+        $(".js-copy-code,#modalCopyBtn,.copy-btn").on("click",function(e){
+          pubgUtils.copyData(e)
+          return false;
+        })
+        
+        // 插件提示
+        $('#btn01').on('click',function(){
+          pubgUtils.toast('复制成功aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+        })      
+        $('#btn02').on('click',function(){
+          pubgUtils.showTip('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+        })
+        $('#btn03').on('click',function(){
+          pubgUtils.showTip('123223', function(){alert('回调执行内容')})
+        })
+        $('#btn04').on('click',function(){
+          pubgUtils.showTip('<p style="text-align:center">复制成功复制成功复制成功复制成功 <a href="http://www.baidu.com" target="_blank">前往官网</a></p>', '', '确定')
+        })
+      
+        // 快捷购买
+        $('#quickToLogin').on('click', function(){
+          $('#qLoginWrap').show();
+          $('#quickLoginWrap').hide();
+          return false;
+        })
+        $('#loginToQuick').on('click', function(){
+          $('#qLoginWrap').hide();
+          $('#quickLoginWrap').show();      
+          return false;
+        })
+      
+        // 众筹记录模拟滚动条
+        $(".welfare-result-list").mCustomScrollbar({
+          mouseWheel:{ scrollAmount: 100 } 
+        });
+        
+      
+        // 确认购买时说明弹窗模拟滚动条
+        $(".modal-explain-box").mCustomScrollbar({
+          mouseWheel:{ scrollAmount: 100 } 
+        });
+      
+        // 成功提示
+        $('#modalSuccBtn').on('click', function(){
+          pubgUtils.modalResultTip({
+            isSucc: true,
+            title: '已提交退款申请成功',
+            msg: '请等待我们客服小姐姐审核吧~'
+          })
+        })
+      
+        // 失败提示
+        $('#modalFailBtn').on('click', function(){
+          pubgUtils.modalResultTip({
+            isSucc: false,
+            title: '订单提交失败',
+            msg: '订单提交失败，请联系客服处理~',
+            btnText: '联系客服',
+            btnCall: function(){
+              window.location.href = 'https://gamelife.swjoy.com/';
+            }
+          })
+        })
+      
+        // 两种支付方式选项卡
+        $('#modalCodeGroup .modal-code-head span').on('click', function(){
+          $(this).addClass('active').siblings('span').removeClass('active');
+          var index = $('#modalCodeGroup .modal-code-head span').index($(this));
+          $('#modalCodeGroup .modal-code').eq(index).show().siblings('.modal-code').hide();
+        })
+        
+        // 发货弹窗
+        $('#shippingModalBtn').on('click', function(){
+          shippingSlider.init({
+            imgs:['https://reswww.swjoy.com/activity/20170210/activity-1cre19v0-608077.jpg?a=bbb','http://img1.gtimg.com/ninja/1/2018/09/ninja153600334772660.jpg','https://inews.gtim0g.com/newsapp_bt/0/48991169000/1000'],
+            status:2    // 0未发货，1已发货无截图，2有截图
+          })
+        });
+        
+        // 维权
+        $('#modalRightsBtn').on('click', function(){
+      
+          $('#modalRights').modal('show');
+          $('.ui-select').sSelect();
+          $('#modalRights textarea').placeholder();
+      
+          $("#modalRights .rights-photos").photoUpload({
+              width: 50,
+              height: 50,
+              len: 5,
+              fileLength: 3072,
+              imgType: ["jpeg", "jpg", "png"],
+              errMsg: "单张不超过3M，支持jpeg/jpg/png格式",
+              upCall: function(order, len){
+                $('#modalRights .number-info').html('共<strong>'+order+'</strong>张，还能上传<strong>'+(len-order)+'</strong>张')
+                $('#uploadError').hide();
+              },
+              errorCall: function(msg){
+                $('#uploadError').text(msg).show();
+              }
+          });
+      
+        })
+      
+        // 礼包系统申请弹窗
+        $('#modalGiftApplyBtn').on('click', function(){
+          $('#modalGiftApply').modal('show');
+          $('#modalGiftApply').placeholder();
+          return false;
+        })
+        $('#giftApply input[type=text]').on('keyup', function(){
+          var qq = $(this).val().replace(/\D/gi,"");
+          $(this).val(qq)
+        })
+      
+        // 验证手机号的方法（11位数字）：pubgUtils.isPoneAvailable(tel)
+      
+      
+      
+      })
+    </script>
+  </body>
+</html>

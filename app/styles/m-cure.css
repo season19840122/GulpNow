@@ -1,0 +1,741 @@
+@charset "UTF-8";
+
+/*
+ * Filename: base.css v2.0
+ * Author: Season 朱迎春
+ * Creattime: 2011-09-02
+ * PS: 模块化 CSS 最底层 base.css
+ */
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+  text-decoration: none;
+}
+
+abbr[title] {
+  border-bottom: 0.013333rem dotted;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 1em 0.533333rem;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 0.013333rem solid silver;
+  margin: 0 0.026667rem;
+  padding: .35em .625em .75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: 700;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+*:focus,
+*:active,
+a:active,
+a:focus,
+input:focus,
+input:active {
+  -moz-outline-style: none;
+  outline: none;
+  outline: 0;
+}
+
+/*-- 文字排版 --*/
+
+.fb {
+  font-weight: bold;
+}
+
+.fn {
+  font-weight: normal;
+}
+
+.unl {
+  text-decoration: underline;
+}
+
+.no-unl {
+  text-decoration: none;
+}
+
+.ti {
+  text-indent: -133.32rem;
+}
+
+.eps,
+.wrap .content-wrap .content ul li .item .name,
+.wrap .dialog-wrap .contents .caption,
+.wrap .dialog-wrap .contents .p1 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.w {
+  width: 100%;
+}
+
+.h {
+  height: 100%;
+}
+
+/*-- 定位 --*/
+
+.tl {
+  text-align: left;
+}
+
+.tc {
+  text-align: center;
+}
+
+.tr {
+  text-align: right;
+}
+
+.bc {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.fl {
+  float: left;
+  display: inline;
+}
+
+.fr {
+  float: right;
+  display: inline;
+}
+
+.cb {
+  clear: both;
+}
+
+.cl {
+  clear: left;
+}
+
+.cr {
+  clear: right;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+.vm {
+  vertical-align: middle;
+}
+
+.pr {
+  position: relative;
+}
+
+.pa {
+  position: absolute;
+}
+
+.abs-right {
+  position: absolute;
+  right: 0;
+}
+
+.zoom {
+  zoom: 1;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block !important;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  outline: 0;
+}
+
+*:focus,
+*:active,
+a:active,
+a:focus,
+input:focus,
+input:active {
+  -moz-outline-style: none;
+  outline: none;
+  outline: 0;
+  text-decoration: none;
+}
+
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.button-sure,
+.button-no {
+  padding: 0;
+  width: 2.106667rem;
+  height: 0.466667rem;
+  line-height: 0.466667rem;
+  color: #271708;
+  border: 0;
+  background: #c49f58;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c49f58), to(#c49f58));
+  background: linear-gradient(to bottom, #c49f58, #c49f58);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */
+}
+
+.button-no {
+  color: #271708;
+  background: #c49f58;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c49f58), to(#c49f58));
+  background: linear-gradient(to bottom, #c49f58, #c49f58);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */
+}
+
+/*容器滚动条*/
+
+.mainScroll::-webkit-scrollbar {
+  width: 0.133333rem;
+  height: 0.133333rem;
+  border-radius: 0.066667rem;
+}
+
+.mainScroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0.066667rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.066667rem;
+  background: #000;
+}
+
+.mainScroll::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 0.066667rem #2d3a48;
+  border-radius: 0.066667rem;
+  background: #33383e;
+}
+
+.mainScroll::-webkit-scrollbar-thumb:hover {
+  background: #5b626c;
+}
+
+.mainScroll::-webkit-scrollbar-thumb:active {
+  background: #4d525a;
+}
+
+/* 列表自定义 webkit 滚动条 */
+
+.smallScroll::-webkit-scrollbar {
+  width: 0.08rem;
+  height: 0.88rem;
+  border-radius: 0.066667rem;
+}
+
+.smallScroll::-webkit-scrollbar-track {
+  border-radius: 0.066667rem;
+  background: none;
+}
+
+.smallScroll::-webkit-scrollbar-thumb {
+  border-radius: 0.066667rem;
+  background: #785a28;
+}
+
+.smallScroll::-webkit-scrollbar-thumb:hover {
+  background: #c8aa6e;
+}
+
+.smallScroll::-webkit-scrollbar-thumb:active {
+  background: #463714;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+}
+
+::-moz-placeholder {
+  color: #fff;
+}
+
+::-ms-input-placeholder {
+  color: #fff;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  outline: 0;
+}
+
+*:focus,
+*:active,
+a:active,
+a:focus,
+input:focus,
+input:active {
+  -moz-outline-style: none;
+  outline: none;
+  outline: 0;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 26px/1.5 'SimHei';
+  background: url(../images/cure-h5/bg.jpg) no-repeat center top;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.wrap {
+  width: 10rem;
+  height: 17.786667rem;
+  margin: 0 auto;
+  background: url(../images/cure-h5/nihong.png) no-repeat center top;
+  background-size: contain;
+  overflow: hidden;
+  position: relative;
+}
+
+.wrap .content-wrap {
+  margin: 2.8rem 0.933333rem;
+  width: 8.4rem;
+  height: 14.533333rem;
+  overflow-x: hidden;
+}
+
+.wrap .content-wrap .content {
+  overflow: hidden;
+}
+
+.wrap .content-wrap .content ul li {
+  cursor: pointer;
+  float: left;
+  width: 2.24rem;
+  height: 3.306667rem;
+  background: url(../images/cure-h5/dark.png) no-repeat center top;
+  background-size: contain;
+  margin-right: 0.666667rem;
+  margin-bottom: 0.4rem;
+}
+
+.wrap .content-wrap .content ul li.on {
+  background: url(../images/cure-h5/light.png) no-repeat center top;
+  background-size: contain;
+}
+
+.wrap .content-wrap .content ul li .item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.wrap .content-wrap .content ul li .item .name {
+  position: absolute;
+  left: 0.2rem;
+  right: 0.2rem;
+  bottom: 0.24rem;
+  text-align: center;
+  height: 0.613333rem;
+  line-height: 0.613333rem;
+  color: #00ff24;
+}
+
+.wrap .content-wrap .content .gift {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 4.066667rem;
+  height: 4.066667rem;
+}
+
+.wrap .content-wrap .content .gift img {
+  width: 4.066667rem;
+  height: 4.066667rem;
+  display: block;
+}
+
+.wrap .masklayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 998;
+  background: #000;
+  opacity: .8;
+  display: none;
+}
+
+.wrap .dialog-wrap {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -4.68rem;
+  margin-top: -6.346667rem;
+  z-index: 999;
+  width: 9.36rem;
+  height: 12.693333rem;
+  background: url(../images/cure-h5/dialog-bg.png) no-repeat;
+  background-size: contain;
+  display: none;
+}
+
+.wrap .dialog-wrap .i-close {
+  background: url(../images/cure-h5/btn-close.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: -0.2rem;
+  top: 0.666667rem;
+  width: 1rem;
+  height: 1.093333rem;
+  cursor: pointer;
+}
+
+.wrap .dialog-wrap .i-close:actived {
+  background: url(../images/cure-h5/btn-close-hover.png) no-repeat;
+  background-size: contain;
+}
+
+.wrap .dialog-wrap .contents {
+  color: #fff;
+  margin: 3.546667rem 1.413333rem 0 1.333333rem;
+  text-align: center;
+  font-size: 0.4rem;
+  line-height: 0.92rem;
+}
+
+.wrap .dialog-wrap .contents .caption {
+  font-size: 0.48rem;
+  line-height: 0.92rem;
+  text-align: center;
+  margin-bottom: 0.4rem;
+  width: 2.4rem;
+  background: none;
+  border-style: none;
+}
+
+.wrap .dialog-wrap .contents .txt {
+  background: none;
+  border-style: none;
+  width: 100%;
+  height: 3.493333rem;
+  overflow: hidden;
+}
+
+.wrap .dialog-wrap .contents .p1 {
+  float: right;
+  width: 1.626667rem;
+  text-align: center;
+  background: none;
+  border-style: none;
+}
+
+.wrap .dialog-wrap .contents .error {
+  position: absolute;
+  left: 1.2rem;
+  bottom: 3.28rem;
+  font-size: 0.266667rem;
+  color: #f00;
+  display: none;
+}
+
+.wrap .dialog-wrap .btn-wrap {
+  position: absolute;
+  left: 50%;
+  margin-left: -1.106667rem;
+  bottom: 1.68rem;
+  z-index: 10;
+}
+
+.wrap .dialog-wrap .btn-wrap .btn-sure {
+  display: inline-block;
+  width: 2.213333rem;
+  height: 0.92rem;
+  background: url(../images/cure-h5/btn-sure.png) no-repeat;
+  background-size: contain;
+}

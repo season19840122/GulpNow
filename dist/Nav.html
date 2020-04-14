@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <title>顺网导航</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+        <link rel="stylesheet" href="styles/nav.css">
+    </head>
+	<body>
+        <div id="box" class="box" v-cloak>
+            <div class="slide">
+                <div class="nav-wrap">
+                    <div class="logo"></div>
+                    <div class="nav-ul">
+                        <ul>
+                            <li v-for="nav in navMenu" @click="selected(nav.categroy)">
+                                <a :href="'#nav-' + nav.categroy" :class="{ on: nav.categroy === active }">
+                                    <div class="item">
+                                        <i :class="'ico-' + nav.categroy"></i>
+                                        <span class="text">{{ nav.name }}</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+			<div class="content-wrap">
+                <div class="content-ul">
+                    <ul>
+                        <li>
+                            <div id="nav-common" class="item">
+                                <h2 class="title-wrap">
+                                    <i class="ico-common"></i>
+                                    <span class="title">常用网站</span>
+                                    <div class="divide"></div>
+                                </h2>
+                                <div class="content">
+                                    <ul>
+                                        <li v-for="item in commonList" :data-id="item.id" :title="item.info">
+                                            <a :href="item.url" target="_blank">
+                                                <div class="list">
+                                                    <i :class="'fl ico-' + item.icon "></i>
+                                                    <div class="text-wrap fl">
+                                                        <h3 class="title">{{ item.title }}</h3>
+                                                        <p class="info">{{ item.info }}</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="nav-pro" class="item">
+                                <h2 class="title-wrap">
+                                    <i class="ico-pro"></i>
+                                    <span class="title">产品中心</span>
+                                    <div class="divide"></div>
+                                </h2>
+                                <div class="content">
+                                    <ul>
+                                        <li v-for="item in navList.product" :data-id="item.id" :title="item.info" @click="addCommon(item)">
+                                            <a :href="item.url" target="_blank">
+                                                <div class="list">
+                                                    <i class="ico-pro fl"></i>
+                                                    <div class="text-wrap fl">
+                                                        <h3 class="title">{{ item.title }}</h3>
+                                                        <p class="info">{{ item.info }}</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="nav-game" class="item">
+                                <h2 class="title-wrap">
+                                    <i class="ico-game"></i>
+                                    <span class="title">游戏业务</span>
+                                    <div class="divide"></div>
+                                </h2>
+                                <div class="content">
+                                    <ul>
+                                        <li v-for="item in navList.game" :data-id="item.id" :title="item.info" @click="addCommon(item)">
+                                            <a :href="item.url" target="_blank">
+                                                <div class="list">
+                                                    <i class="ico-game fl"></i>
+                                                    <div class="text-wrap fl">
+                                                        <h3 class="title">{{ item.title }}</h3>
+                                                        <p class="info">{{ item.info }}</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="nav-ad" class="item">
+                                <h2 class="title-wrap">
+                                    <i class="ico-ad"></i>
+                                    <span class="title">广告业务</span>
+                                    <div class="divide"></div>
+                                </h2>
+                                <div class="content">
+                                    <ul>
+                                        <li v-for="item in navList.ad" :data-id="item.id" :title="item.info" @click="addCommon(item)">
+                                            <a :href="item.url" target="_blank">
+                                                <div class="list">
+                                                    <i class="ico-ad fl"></i>
+                                                    <div class="text-wrap fl">
+                                                        <h3 class="title">{{ item.title }}</h3>
+                                                        <p class="info">{{ item.info }}</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="nav-inc" class="item">
+                                <h2 class="title-wrap">
+                                    <i class="ico-inc"></i>
+                                    <span class="title">增值业务</span>
+                                    <div class="divide"></div>
+                                </h2>
+                                <div class="content">
+                                    <ul>
+                                        <li v-for="item in navList.increment" :data-id="item.id" :title="item.info" @click="addCommon(item)">
+                                            <a :href="item.url" target="_blank">
+                                                <div class="list">
+                                                    <i class="ico-inc fl"></i>
+                                                    <div class="text-wrap fl">
+                                                        <h3 class="title">{{ item.title }}</h3>
+                                                        <p class="info">{{ item.info }}</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        <script src="scripts/base-nav.js"></script>
+        <script src="scripts/nav.js"></script>
+    </body>
+</html>

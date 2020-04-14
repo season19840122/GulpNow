@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <link rel="stylesheet" href="styles/public.css">
+    <script>
+      var localUrl = "https://www.5866.com/", staticUrl = "//mallstatic.5866.com/", picUrl = "https://pic.5866.com/upmall/";
+      
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?80f4eaf5643d9a87cb63f7dc3f3430d0";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+      
+    </script>
+  </head>
+  <body class="login-page">
+    
+    
+    
+    <div class="login-page-wrapper">
+      <div class="login-page-header">
+        <div class="logo"><a href="https://www.5866.com/"> <img src="images/mall_logo.png" alt=""></a></div>
+      </div>
+      <div class="login-page-wrap" style="background-image:url('images/login-background.jpg')">
+        <div class="login-page-box">
+          <div class="login-page-iframe">
+            <iframe id="loginIframe" src="https://sso.kedou.com/login.do?loginType=quickLogin&amp;site_id=swPubgmall&amp;loginMode=smsLoginType&amp;env=false&amp;extData=false&amp;tgt=false&amp;callbackUrl=https%3A%2F%2Fsso.5866.com%2FgameShop%2FloginCheck%3FtoUrl%3Dhttps%3A%2F%2Fwww.5866.com%2Flogined%3FcallUrl%3Dpersonal%2Findex" name="" frameborder="" scrolling="no" allowtransparency="false"></iframe>
+            <div class="login-loading" id="loginLoading"></div>
+          </div>
+        </div>
+      </div>
+      <div class="login-page-footer">©杭州顺网科技股份有限公司 保留所有权利 <a href="http://www.swjoy.com/icp.html" target="_blank">浙B2-20090265</a><a class="glmall-beian" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602002164" target="_blank"><img src="./images/ghs.png">浙公网安备 33010602002164号</a><a href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/8A82C51D57654B639A8861237157F60B" target="_blank"><img src="./images/wen.png" alt="互联网文化经营单位"></a><a target="_blank" href="http://idinfo.zjaic.gov.cn/bscx.do?method=hddoc&amp;id=33000000008182"><img src="./images/i_lo2.png" border="0"></a></div>
+    </div>
+    <script>
+      var iframe = document.getElementById('loginIframe');
+      var loading = document.getElementById('loginLoading');
+      iframe.onload = function(){ 
+        loading.style.display='none'
+      }; 
+    </script>
+  </body>
+</html>

@@ -1,0 +1,328 @@
+@import '_base.scss';
+@import '_common.scss';
+
+::placeholder {
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  outline: 0;
+}
+
+*:focus,
+*:active,
+a:active,
+a:focus,
+input:focus,
+input:active {
+  -moz-outline-style: none;
+  outline: none;
+  outline: 0;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* 背景 */
+.browser {
+  height:28px;
+  font-size:14px;
+  line-height:28px;
+  color:#C7A17B;
+  background:#FFFFE1;
+  position:absolute;
+  width:100%;
+  min-width:1200px;
+  text-align:center;
+  z-index:1000;
+  left:0;
+  top:0;
+  a {
+    color:#06c;
+    text-decoration:underline;
+  }
+}
+
+body {
+  background-color:#13151d;
+  font: 14px/1.5 'Microsoft YaHei';
+}
+.bg-box{
+  min-width:1200px;
+  div {
+    width:100%;
+  }
+}
+.bg1{
+  background:url(../images/faq/bg01.jpg) no-repeat center 0;
+  height:398px;
+}
+.bg2{
+  background:url(../images/faq/bg02.jpg) no-repeat center 0;
+  height:492px;
+}
+.bg3{
+  background-color: #21232b;
+  height:557px;
+}
+/* 背景 end */
+
+/* 主体内容 */
+.wrap-box {
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  min-width:1200px;
+  overflow:hidden;
+  .wrap{
+    width:1200px;
+    height:1447px;
+    margin:0 auto;
+    position:relative;
+    .game-wrap {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 939px;
+      .caption {
+        background: url(../images/faq/title.png) no-repeat;
+        width: 344px;
+        height: 60px;
+        margin: 0 auto;
+      }
+      .game {
+        margin-top: 40px;
+        ul {
+          width: 110%;
+          overflow: hidden;
+          padding-top: 10px;
+          li {
+            float: left;
+            margin-right: 20px;
+            transition: box-shadow 200ms ease-in, transform 200ms ease-in;
+            &:hover {
+              box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+              transform: translateY(-2px);
+            }
+            a {
+              color: #c0c3cc;
+              .item {
+                width: 135px;
+                height: 200px;
+                img {
+                  width: 123px;
+                  height: 165px;
+                  display: block;
+                  margin: 0 auto;
+                }
+                .text {
+                  margin-top: 15px;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .gd-wrap {
+      margin-top: 55px;
+      text-align: center;
+      .gd {
+        width: 300px;
+        height: 50px;
+        display: inline-block;
+        background: url(../images/faq/btn-gd.png) no-repeat;
+        &:hover {
+          background-position: 0 -50px;
+        }
+      }
+    }
+    .zh-wrap {
+      margin-top: 60px;
+      text-align: center;
+      a {
+        color: #626368;
+        font-size: 12px;
+        margin: 0 20px;
+        &:hover {
+          color: #c0c3cc;
+        }
+      }
+    }
+  }
+}
+
+// 轮播
+.lottery-wrap {
+  .logo {
+    width: 206px;
+    height: 42px;
+    background: url(../images/faq/logo.png) no-repeat;
+    position: absolute;
+    top: 43px;
+    left: 0;
+    z-index: 100;
+  }
+  .swiper-wrap {
+    position: relative;
+    .swiper-container {
+      height: 890px;
+      position: relative;
+      overflow: hidden;
+      .swiper-wrapper {
+      }
+      .swiper-slide {
+        float: left;
+        position: relative;
+        .left {
+          position: absolute;
+          left: -20px;
+          top: 0;
+          transform: translate(0,700px);
+          // transition: all .75s cubic-bezier(.28,.52,.64,1.68) 0s;
+          opacity: 0;
+          filter: alpha(opacity=0);
+          img {
+            display: block;
+          }
+        }
+        .right {
+          position: absolute;
+          right: 0;
+          top: 216px;
+          transform: translate(400px,0);
+          // transition: all .75s cubic-bezier(.28,.52,.64,1.68) 0s;
+          opacity: 0;
+          filter: alpha(opacity=0);
+        }
+        .btn-next {
+          position: absolute;
+          top: 564px;
+          right: 10px;
+          width: 182px;
+          height: 50px;
+          background: url("../images/faq/btn-next.png") no-repeat;
+          transform: translate(200px,0);
+          // transition: all .75s cubic-bezier(.28,.52,.64,1.68) 0s;
+          opacity: 0;
+          filter: alpha(opacity=0);
+          &:hover {
+            background-position: 0 -50px;
+          }
+        }
+      }
+      .swiper-slide-active {
+        .left {
+          transform: translate(0,0);
+          opacity: 1;
+          filter: alpha(opacity=100);
+          transition: transform .5s ease-in-out, opacity .5s ease-in-out .3s;
+        }
+        .right {
+          transform: translate(0,0);
+          opacity: 1;
+          filter: alpha(opacity=100);
+          transition: transform .5s ease-in-out, opacity .5s ease-in-out .3s;
+        }
+        .btn-next {
+          transform: translate(0,0);
+          opacity: 1;
+          filter: alpha(opacity=100);
+          transition: transform .5s ease-in-out .3s, opacity .5s ease-in-out .3s;
+        }
+      }
+    }
+    .guide-swiper-prev, .guide-swiper-next {
+      cursor: pointer;
+      width: 70px;
+      height: 194px;
+      position: absolute;
+      left: -300px;;
+      top: 306px;
+      background: url(../images/faq/btn-left.png) no-repeat;
+      &:hover {
+        background: url(../images/faq/btn-left-hover.png) no-repeat;
+      }
+    }
+    .guide-swiper-next {
+      left: auto;
+      right: -300px;
+      background: url(../images/faq/btn-right.png) no-repeat;
+      &:hover {
+        background: url(../images/faq/btn-right-hover.png) no-repeat;
+      }
+    }
+    .guide-swiper-prev.active, .guide-swiper-next.active {
+      display: block;
+    }
+    .guide-nav {
+      position: absolute;
+      left: 0;
+      bottom: 50px;
+      width: 1200px;
+      height: 80px;
+      background: url(../images/faq/tab.png) no-repeat;
+      padding-left: 49px;
+      .guide-nav-list {
+        float: left;
+        cursor: pointer;
+        margin-right: 4px;
+        width: 218px;
+        height: 80px;
+        &:hover, &.active {
+          margin-top: -15px;
+          width: 218px;
+          height: 82px;
+          background: url("../images/faq/guide1-hover.png") no-repeat;
+        }
+      }
+      .guide-nav-list-2 {
+        &:hover, &.active {
+          background: url("../images/faq/guide2-hover.png") no-repeat;
+        }
+      }
+      .guide-nav-list-3 {
+        &:hover, &.active {
+          background: url("../images/faq/guide3-hover.png") no-repeat;
+        }
+      }
+      .guide-nav-list-4 {
+        &:hover, &.active {
+          background: url("../images/faq/guide4-hover.png") no-repeat;
+        }
+      }
+      .guide-nav-list-5 {
+        &:hover, &.active {
+          background: url("../images/faq/guide5-hover.png") no-repeat;
+        }
+      }
+    }
+  }
+}
+/* 主体内容 end */

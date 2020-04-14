@@ -1,0 +1,126 @@
+{
+  "isError": false, 
+  "message": [
+    {
+      "serverId": "1", 
+      "serverName": "广东区广东区广东区广东区广东区广东区",
+      "isHaveServer": true
+    }, 
+    {
+      "serverId": "2", 
+      "serverName": "北京区"
+    }, 
+    {
+      "serverId": "3", 
+      "serverName": "四川区"
+    }, 
+    {
+      "serverId": "4", 
+      "serverName": "江苏区"
+    }, 
+    {
+      "serverId": "5", 
+      "serverName": "湖北区"
+    }, 
+    {
+      "serverId": "6", 
+      "serverName": "广西区"
+    }, 
+    {
+      "serverId": "7", 
+      "serverName": "东北区"
+    }, 
+    {
+      "serverId": "8", 
+      "serverName": "浙江区"
+    }, 
+    {
+      "serverId": "9", 
+      "serverName": "山东区"
+    }, 
+    {
+      "serverId": "10", 
+      "serverName": "上海区"
+    }, 
+    {
+      "serverId": "11", 
+      "serverName": "西南区"
+    }, 
+    {
+      "serverId": "12", 
+      "serverName": "安徽区"
+    }, 
+    {
+      "serverId": "13", 
+      "serverName": "河北区"
+    }, 
+    {
+      "serverId": "14", 
+      "serverName": "辽宁区"
+    }, 
+    {
+      "serverId": "15", 
+      "serverName": "福建区"
+    }, 
+    {
+      "serverId": "16", 
+      "serverName": "华北区"
+    }, 
+    {
+      "serverId": "17", 
+      "serverName": "重庆区"
+    }, 
+    {
+      "serverId": "18", 
+      "serverName": "黑龙江区"
+    }, 
+    {
+      "serverId": "19", 
+      "serverName": "江西区"
+    }, 
+    {
+      "serverId": "20", 
+      "serverName": "西北区"
+    }, 
+    {
+      "serverId": "21", 
+      "serverName": "陕西区"
+    }, 
+    {
+      "serverId": "22", 
+      "serverName": "吉林区"
+    }, 
+    {
+      "serverId": "23", 
+      "serverName": "山西区"
+    }, 
+    {
+      "serverId": "24", 
+      "serverName": "天津区"
+    }, 
+    {
+      "serverId": "25", 
+      "serverName": "河南区"
+    }, 
+    {
+      "serverId": "26", 
+      "serverName": "湖南区"
+    }, 
+    {
+      "serverId": "27", 
+      "serverName": "新疆区"
+    }, 
+    {
+      "serverId": "28", 
+      "serverName": "内蒙古区"
+    }, 
+    {
+      "serverId": "29", 
+      "serverName": "云贵区"
+    }, 
+    {
+      "serverId": "30", 
+      "serverName": "体验区"
+    }
+  ]
+}

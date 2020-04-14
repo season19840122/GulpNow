@@ -7,6 +7,7 @@ var gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'),
   autoprefixer = require('autoprefixer'),
   px2rem = require('postcss-px2rem'),
+  pxtoviewport = require('postcss-px-to-viewport'),
   imageResize = require('gulp-image-resize');
 
 
@@ -58,13 +59,25 @@ gulp.task('less', function () {
 });
 
 gulp.task('m-less', function () {
-  var processors = px2rem({
-    remUnit: 75
-  });
+  var processors = [
+    // px2rem({
+    //   remUnit: 75
+    // }),
+    pxtoviewport({
+      viewportWidth: 750,
+      unitPrecision: 5,
+      viewportUnit: 'vw',
+      selectorBlackList: [],
+      minPixelValue: 1,
+      mediaQuery: false
+    }),
+    autoprefixer()
+  ];
+
   return gulp.src('app/styles/m-*.less')
     .pipe($.plumber())
     .pipe($.less())
-    .pipe(postcss([processors, autoprefixer()]))
+    .pipe(postcss([processors]))
     .pipe(gulp.dest('app/styles'))
     .pipe(browserSync.stream());
 });
@@ -87,19 +100,31 @@ gulp.task('sass', function () {
 });
 
 gulp.task('m-sass', function () {
-  var processors = px2rem({
-    remUnit: 75
-  });
+  var processors = [
+    // px2rem({
+    //   remUnit: 75
+    // }),
+    pxtoviewport({
+      viewportWidth: 750,
+      unitPrecision: 5,
+      viewportUnit: 'vw',
+      selectorBlackList: [],
+      minPixelValue: 1,
+      mediaQuery: false
+    }),
+    autoprefixer()
+  ];
+
   return gulp.src([
-      'app/styles/m-*.scss'
-    ])
-    .pipe($.plumber())
-    .pipe($.sass({
-      outputStyle: 'expanded'
-    }).on('error', $.sass.logError))
-    .pipe(postcss([processors, autoprefixer()]))
-    .pipe(gulp.dest('app/styles'))
-    .pipe(browserSync.stream());
+    'app/styles/m-*.scss'
+  ])
+  .pipe($.plumber())
+  .pipe($.sass({
+    outputStyle: 'expanded'
+  }).on('error', $.sass.logError))
+  .pipe(postcss(processors))
+  .pipe(gulp.dest('app/styles'))
+  .pipe(browserSync.stream());
 });
 
 gulp.task('script', function () {

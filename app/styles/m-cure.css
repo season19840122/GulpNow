@@ -1,14 +1,11 @@
 @charset "UTF-8";
-
 /*
  * Filename: base.css v2.0
  * Author: Season 朱迎春
  * Creattime: 2011-09-02
  * PS: 模块化 CSS 最底层 base.css
  */
-
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -19,26 +16,11 @@ body {
   margin: 0;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
-audio,
-canvas,
-progress,
-video {
+audio, canvas, progress, video {
   display: inline-block;
   vertical-align: baseline;
 }
@@ -48,8 +30,7 @@ audio:not([controls]) {
   height: 0;
 }
 
-[hidden],
-template {
+[hidden], template {
   display: none;
 }
 
@@ -58,18 +39,16 @@ a {
   text-decoration: none;
 }
 
-a:active,
-a:hover {
+a:active, a:hover {
   outline: 0;
   text-decoration: none;
 }
 
 abbr[title] {
-  border-bottom: 0.013333rem dotted;
+  border-bottom: 1px dotted;
 }
 
-b,
-strong {
+b, strong {
   font-weight: 700;
 }
 
@@ -91,8 +70,7 @@ small {
   font-size: 80%;
 }
 
-sub,
-sup {
+sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -116,10 +94,11 @@ svg:not(:root) {
 }
 
 figure {
-  margin: 1em 0.533333rem;
+  margin: 1em 5.33333vw;
 }
 
 hr {
+  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   height: 0;
@@ -129,19 +108,12 @@ pre {
   overflow: auto;
 }
 
-code,
-kbd,
-pre,
-samp {
+code, kbd, pre, samp {
   font-family: monospace,monospace;
   font-size: 1em;
 }
 
-button,
-input,
-optgroup,
-select,
-textarea {
+button, input, optgroup, select, textarea {
   color: inherit;
   font: inherit;
   margin: 0;
@@ -151,26 +123,20 @@ button {
   overflow: visible;
 }
 
-button,
-select {
+button, select {
   text-transform: none;
 }
 
-button,
-html input[type=button],
-input[type=reset],
-input[type=submit] {
+button, html input[type=button], input[type=reset], input[type=submit] {
   -webkit-appearance: button;
   cursor: pointer;
 }
 
-button[disabled],
-html input[disabled] {
+button[disabled], html input[disabled] {
   cursor: default;
 }
 
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -179,32 +145,31 @@ input {
   line-height: normal;
 }
 
-input[type=checkbox],
-input[type=radio] {
+input[type=checkbox], input[type=radio] {
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
 input[type=search] {
   -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-decoration {
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
 fieldset {
-  border: 0.013333rem solid silver;
-  margin: 0 0.026667rem;
+  border: 1px solid silver;
+  margin: 0 0.26667vw;
   padding: .35em .625em .75em;
 }
 
@@ -226,8 +191,7 @@ table {
   border-spacing: 0;
 }
 
-td,
-th {
+td, th {
   padding: 0;
 }
 
@@ -235,19 +199,13 @@ li {
   list-style: none;
 }
 
-*:focus,
-*:active,
-a:active,
-a:focus,
-input:focus,
-input:active {
+*:focus, *:active, a:active, a:focus, input:focus, input:active {
   -moz-outline-style: none;
   outline: none;
   outline: 0;
 }
 
 /*-- 文字排版 --*/
-
 .fb {
   font-weight: bold;
 }
@@ -265,13 +223,10 @@ input:active {
 }
 
 .ti {
-  text-indent: -133.32rem;
+  text-indent: -1333.2vw;
 }
 
-.eps,
-.wrap .content-wrap .content ul li .item .name,
-.wrap .dialog-wrap .contents .caption,
-.wrap .dialog-wrap .contents .p1 {
+.eps, .wrap .content-wrap .content ul li .item .name, .wrap .dialog-wrap .contents .caption, .wrap .dialog-wrap .contents .p1 {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -286,7 +241,6 @@ input:active {
 }
 
 /*-- 定位 --*/
-
 .tl {
   text-align: left;
 }
@@ -326,8 +280,7 @@ input:active {
   clear: right;
 }
 
-.cf:before,
-.cf:after {
+.cf:before, .cf:after {
   content: " ";
   display: table;
 }
@@ -379,6 +332,7 @@ input:active {
 
 * {
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -390,8 +344,7 @@ a {
   text-decoration: none;
 }
 
-a:hover,
-a:active {
+a:hover, a:active {
   text-decoration: none;
 }
 
@@ -400,40 +353,28 @@ button {
   outline: 0;
 }
 
-*:focus,
-*:active,
-a:active,
-a:focus,
-input:focus,
-input:active {
+*:focus, *:active, a:active, a:focus, input:focus, input:active {
   -moz-outline-style: none;
   outline: none;
   outline: 0;
   text-decoration: none;
 }
 
-p,
-ul,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+p, ul, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
 
-.button-sure,
-.button-no {
+.button-sure, .button-no {
   padding: 0;
-  width: 2.106667rem;
-  height: 0.466667rem;
-  line-height: 0.466667rem;
+  width: 21.06667vw;
+  height: 4.66667vw;
+  line-height: 4.66667vw;
   color: #271708;
   border: 0;
   background: #c49f58;
   background: -webkit-gradient(linear, left top, left bottom, from(#c49f58), to(#c49f58));
+  background: -moz- oldlinear-gradient(top, #c49f58, #c49f58);
   background: linear-gradient(to bottom, #c49f58, #c49f58);
   /* Standard syntax */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
@@ -444,6 +385,7 @@ h6 {
   color: #271708;
   background: #c49f58;
   background: -webkit-gradient(linear, left top, left bottom, from(#c49f58), to(#c49f58));
+  background: -moz- oldlinear-gradient(top, #c49f58, #c49f58);
   background: linear-gradient(to bottom, #c49f58, #c49f58);
   /* Standard syntax */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
@@ -451,22 +393,24 @@ h6 {
 }
 
 /*容器滚动条*/
-
 .mainScroll::-webkit-scrollbar {
-  width: 0.133333rem;
-  height: 0.133333rem;
-  border-radius: 0.066667rem;
+  width: 1.33333vw;
+  height: 1.33333vw;
+  -webkit-border-radius: 0.66667vw;
+          border-radius: 0.66667vw;
 }
 
 .mainScroll::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 0.066667rem rgba(0, 0, 0, 0.1);
-  border-radius: 0.066667rem;
+  -webkit-box-shadow: inset 0 0 0.66667vw rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 0.66667vw;
+          border-radius: 0.66667vw;
   background: #000;
 }
 
 .mainScroll::-webkit-scrollbar-thumb {
-  -webkit-box-shadow: inset 0 0 0.066667rem #2d3a48;
-  border-radius: 0.066667rem;
+  -webkit-box-shadow: inset 0 0 0.66667vw #2d3a48;
+  -webkit-border-radius: 0.66667vw;
+          border-radius: 0.66667vw;
   background: #33383e;
 }
 
@@ -479,20 +423,22 @@ h6 {
 }
 
 /* 列表自定义 webkit 滚动条 */
-
 .smallScroll::-webkit-scrollbar {
-  width: 0.08rem;
-  height: 0.88rem;
-  border-radius: 0.066667rem;
+  width: 0.8vw;
+  height: 8.8vw;
+  -webkit-border-radius: 0.66667vw;
+          border-radius: 0.66667vw;
 }
 
 .smallScroll::-webkit-scrollbar-track {
-  border-radius: 0.066667rem;
+  -webkit-border-radius: 0.66667vw;
+          border-radius: 0.66667vw;
   background: none;
 }
 
 .smallScroll::-webkit-scrollbar-thumb {
-  border-radius: 0.066667rem;
+  -webkit-border-radius: 0.66667vw;
+          border-radius: 0.66667vw;
   background: #785a28;
 }
 
@@ -522,6 +468,7 @@ h6 {
 
 * {
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -533,8 +480,7 @@ a {
   text-decoration: none;
 }
 
-a:hover,
-a:active {
+a:hover, a:active {
   text-decoration: none;
 }
 
@@ -543,12 +489,7 @@ button {
   outline: 0;
 }
 
-*:focus,
-*:active,
-a:active,
-a:focus,
-input:focus,
-input:active {
+*:focus, *:active, a:active, a:focus, input:focus, input:active {
   -moz-outline-style: none;
   outline: none;
   outline: 0;
@@ -565,26 +506,29 @@ ul {
 }
 
 body {
-  font: 26px/1.5 'SimHei';
+  font: 3.46667vw/1.5 'SimHei';
+  /*no*/
   background: url(../images/cure-h5/bg.jpg) no-repeat center top;
-  background-size: contain;
+  -moz-background-size: contain;
+       background-size: contain;
   cursor: pointer;
 }
 
 .wrap {
-  width: 10rem;
-  height: 17.786667rem;
+  width: 100vw;
+  height: 177.86667vw;
   margin: 0 auto;
   background: url(../images/cure-h5/nihong.png) no-repeat center top;
-  background-size: contain;
+  -moz-background-size: contain;
+       background-size: contain;
   overflow: hidden;
   position: relative;
 }
 
 .wrap .content-wrap {
-  margin: 2.8rem 0.933333rem;
-  width: 8.4rem;
-  height: 14.533333rem;
+  margin: 28vw 9.33333vw;
+  width: 84vw;
+  height: 145.33333vw;
   overflow-x: hidden;
 }
 
@@ -595,17 +539,19 @@ body {
 .wrap .content-wrap .content ul li {
   cursor: pointer;
   float: left;
-  width: 2.24rem;
-  height: 3.306667rem;
+  width: 22.4vw;
+  height: 33.06667vw;
   background: url(../images/cure-h5/dark.png) no-repeat center top;
-  background-size: contain;
-  margin-right: 0.666667rem;
-  margin-bottom: 0.4rem;
+  -moz-background-size: contain;
+       background-size: contain;
+  margin-right: 6.66667vw;
+  margin-bottom: 4vw;
 }
 
 .wrap .content-wrap .content ul li.on {
   background: url(../images/cure-h5/light.png) no-repeat center top;
-  background-size: contain;
+  -moz-background-size: contain;
+       background-size: contain;
 }
 
 .wrap .content-wrap .content ul li .item {
@@ -616,12 +562,12 @@ body {
 
 .wrap .content-wrap .content ul li .item .name {
   position: absolute;
-  left: 0.2rem;
-  right: 0.2rem;
-  bottom: 0.24rem;
+  left: 2vw;
+  right: 2vw;
+  bottom: 2.4vw;
   text-align: center;
-  height: 0.613333rem;
-  line-height: 0.613333rem;
+  height: 6.13333vw;
+  line-height: 6.13333vw;
   color: #00ff24;
 }
 
@@ -629,13 +575,13 @@ body {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 4.066667rem;
-  height: 4.066667rem;
+  width: 40.66667vw;
+  height: 40.66667vw;
 }
 
 .wrap .content-wrap .content .gift img {
-  width: 4.066667rem;
-  height: 4.066667rem;
+  width: 40.66667vw;
+  height: 40.66667vw;
   display: block;
 }
 
@@ -655,46 +601,49 @@ body {
   position: fixed;
   left: 50%;
   top: 50%;
-  margin-left: -4.68rem;
-  margin-top: -6.346667rem;
+  margin-left: -46.8vw;
+  margin-top: -63.46667vw;
   z-index: 999;
-  width: 9.36rem;
-  height: 12.693333rem;
+  width: 93.6vw;
+  height: 126.93333vw;
   background: url(../images/cure-h5/dialog-bg.png) no-repeat;
-  background-size: contain;
+  -moz-background-size: contain;
+       background-size: contain;
   display: none;
 }
 
 .wrap .dialog-wrap .i-close {
   background: url(../images/cure-h5/btn-close.png) no-repeat;
-  background-size: contain;
+  -moz-background-size: contain;
+       background-size: contain;
   position: absolute;
-  right: -0.2rem;
-  top: 0.666667rem;
-  width: 1rem;
-  height: 1.093333rem;
+  right: -2vw;
+  top: 6.66667vw;
+  width: 10vw;
+  height: 10.93333vw;
   cursor: pointer;
 }
 
 .wrap .dialog-wrap .i-close:actived {
   background: url(../images/cure-h5/btn-close-hover.png) no-repeat;
-  background-size: contain;
+  -moz-background-size: contain;
+       background-size: contain;
 }
 
 .wrap .dialog-wrap .contents {
   color: #fff;
-  margin: 3.546667rem 1.413333rem 0 1.333333rem;
+  margin: 35.46667vw 14.13333vw 0 13.33333vw;
   text-align: center;
-  font-size: 0.4rem;
-  line-height: 0.92rem;
+  font-size: 4vw;
+  line-height: 9.2vw;
 }
 
 .wrap .dialog-wrap .contents .caption {
-  font-size: 0.48rem;
-  line-height: 0.92rem;
+  font-size: 4.8vw;
+  line-height: 9.2vw;
   text-align: center;
-  margin-bottom: 0.4rem;
-  width: 2.4rem;
+  margin-bottom: 4vw;
+  width: 24vw;
   background: none;
   border-style: none;
 }
@@ -703,13 +652,13 @@ body {
   background: none;
   border-style: none;
   width: 100%;
-  height: 3.493333rem;
+  height: 34.93333vw;
   overflow: hidden;
 }
 
 .wrap .dialog-wrap .contents .p1 {
   float: right;
-  width: 1.626667rem;
+  width: 16.26667vw;
   text-align: center;
   background: none;
   border-style: none;
@@ -717,9 +666,9 @@ body {
 
 .wrap .dialog-wrap .contents .error {
   position: absolute;
-  left: 1.2rem;
-  bottom: 3.28rem;
-  font-size: 0.266667rem;
+  left: 12vw;
+  bottom: 32.8vw;
+  font-size: 2.66667vw;
   color: #f00;
   display: none;
 }
@@ -727,15 +676,16 @@ body {
 .wrap .dialog-wrap .btn-wrap {
   position: absolute;
   left: 50%;
-  margin-left: -1.106667rem;
-  bottom: 1.68rem;
+  margin-left: -11.06667vw;
+  bottom: 16.8vw;
   z-index: 10;
 }
 
 .wrap .dialog-wrap .btn-wrap .btn-sure {
   display: inline-block;
-  width: 2.213333rem;
-  height: 0.92rem;
+  width: 22.13333vw;
+  height: 9.2vw;
   background: url(../images/cure-h5/btn-sure.png) no-repeat;
-  background-size: contain;
+  -moz-background-size: contain;
+       background-size: contain;
 }
